@@ -1,0 +1,136 @@
+{
+    "header": {
+        "title": "UAB Toten Transport Lithuania - transportavimo, logistikos kompanija.",
+        "description":"yPilnų ir dalinių krovinių pervežimas į Norvegiją, Švediją, Suomiją ir atgal. Muitinės tarpininkas. Sandėliavimo bei krovos darbai Kaune. UAB Toten Transport Lithuania su jumis jau 20metų, priklausome TOTEN TRANSPORT AS kompanijų grupei."
+      },
+    "index": {
+        "firstText": "Dalinių ir pilnų krovinių gabenimas tarp Lietuvos ir Skandinavijos šalių",
+        "secondText": "Taip pat teikiame sandėliavimo, terminalų, muitinės tarpininkavimo paslaugas",
+        "btnText": "Susisiekt"
+      },
+    "about": {
+        "firstText": "Lietuvos-Norvegijos logistikos paslaugų įmonė Kaune, veikianti nuo 2000 metų. Priklauso Norvegijos įmonės Toten Transport AS grupei. Pagrindinė veikla – smulkių ,dalinių ir pilnų krovinių gabenimas automobilių transportu Skandinavijos ir Baltijos šalių kryptimis. Esame Lietuvos Nacionalinės Ekspeditorių Asociacijos LINEKA narys. Civilinė atsakomybė draudžiama pagal Lietuvos ekspeditorių bendrąsias ekspedijavimo sąlygas LEBES - atitinka Šiaurės šalių ekspedijavimo sąlygas NSAB 2015. Įmonės transporto priemonėse įdiegta krovinių sekimo įranga, galime operatyviai suteikti informaciją apie vežamus krovinius ir mašinos buvimo vietą. Sandėlis Kaune, muitinės tarpininkavimo paslaugos.",
+        "secondText": "Mums svarbus kiekvienas užsakymas ir kiekvienas klientas!",
+        "totenText": "Nuo 2017 UAB Nordcarrier Baltic priklauso Norvegijos logistikos paslaugų grupei TOTEN TRANSPORT AS.",
+        "totenText2": "Grupė veikia daugiau nei 40metų ir yra žinoma Skandinavijos šalyse ir plečia savo veiklą Baltijos šalyse.",
+        "code":"Įmonės kodas",
+        "vat": "PVM mokėtojo kodas",
+        "address": "Ofiso adresas",
+        "phone":"Kontaktinis telefonas",
+        "email":"El. paštas"
+      },
+    "features":
+        [
+            {
+                "id": "1",
+                "featureHeading": "Didelė patirtis pervežimuose",
+                "featureText": "Pervežimus į Skandinavijos šalis vykdome nuo 2000m. Nuo 2017m. esame Toten Transport grupės padalinys.",
+                "featureIcon": "certificat"
+              },
+              {
+                "id": "2",
+                "featureHeading": "Reguliarūs reisai",
+                "featureText": "Vykstame į Švediją, Norvegiją 2 kartus savaitėje.Reguliarūs reisai iš šiaurės Norvegijos kiekvieną savaitę.",
+                "featureIcon": "calendar"
+              },
+              {
+                "id": "3",
+                "featureHeading": "Muitinės tarpininkavimas",
+                "featureText": "Tvarkome muitinės eksporto, importo ir kitus muitinės formalumus. Tiek Lietuvoje, tiek Norvegijoje.",
+                "featureIcon": "file"
+              },
+              {
+                "id": "4",
+                "featureHeading": "Sandėliavimas, perkrovimai",
+                "featureText": "Sandėlis Kaune (Palemono 171) ir Norvegijoje (Oslo)",
+                "featureIcon": "warehouse"
+              }
+          ],
+    "contacts": 
+    [
+        {
+          "id": "INo",
+          "name": "Reguliarūs dalinių ir pilnų krovinių gabenimo maršrutai į Norvegiją ir Švediją.",
+          "person": "Jolita",
+          "mobHref": "+37069930371",
+          "mob": "+370 699 30371",
+          "mailHref": "scand@toten-transport.lt",
+          "mail": "scand@toten-transport.lt"
+        },
+        {
+          "id": "IsNo",
+          "name": "Pastovūs dalinių ir pilnų krovinių pervežimai iš Norvegijos bei Švedijos.",
+          "person": "Violeta",
+          "mobHref": "+370608569900",
+          "mob": "+370 685 69900",
+          "mailHref": "scand@toten-transport.lt",
+          "mail": "scand@toten-transport.lt"
+        },
+        {
+          "id": "Muit",
+          "name": "Muitinės eksporto/importo deklaracijos Kaune, Intrastat pildymas.",
+          "person": "Deimantas",
+          "mobHref": "+37060848811",
+          "mob": "+370 608 48811",
+          "mailHref": "cust@toten-transport.lt",
+          "mail": "cust@toten-transport.lt"
+        },
+        {
+          "id": "Kiti",
+          "name": "Kitos kryptys. Negabaritiniai kroviniai, spec krovinių gabenimas.",
+          "person": "Kęstutis",
+          "mobHref": "+37069838550",
+          "mob": "+370 698 38550",
+          "mailHref": "k.baltakis@toten-transport.lt",
+          "mail": "k.baltakis@toten-transport.lt"
+        },
+        {
+          "id": "Fin",
+          "name": "Krovinių gabenimas Suomijos kryptimis, kelto bilietų užsakymai.",
+          "person": "Jurgita",
+          "mobHref": "+37069962074",
+          "mob": "+370 699 62074",
+          "mailHref": "fin@toten-transport.lt",
+          "mail": "fin@toten-transport.lt"
+        },
+      
+        {
+          "id": "Buh",
+          "name": "Buhalterija. Finansai. Sąskaitos.",
+          "person": "Sonata",
+          "mobHref": "+37069983248",
+          "mob": "+370 699 83248",
+          "mailHref": "sonata@toten-transport.lt",
+          "mail": "sonata@toten-transport.lt",
+          "mailHref2": "sinvoice@toten-transport.lt",
+          "mail2": "invoice@toten-transport.lt"
+        },
+        {
+          "id": "Rel",
+          "name": "Santykiai su vežėjais, rinkodara, spec. pasiūlymai.",
+          "person": "Audrius",
+          "mobHref": "+37069944422",
+          "mob": "+370 699 44422",
+          "mailHref": "audrius@toten-transport.lt",
+          "mail": "audrius@toten-transport.lt"
+        },
+        {
+          "id": "Sand",
+          "name": "Sandėliavimas, perkrovimas.",
+          "person": "Gintaras",
+          "mobHref": "+37069990014",
+          "mob": "+370 699 90014",
+          "mailHref": "sandelis@toten-transport.lt",
+          "mail": "sandelis@toten-transport.lt"
+        },
+        {
+          "id": "Vad",
+          "name": "Vadovas.",
+          "person": "Eglė",
+          "mobHref": "+37061873017",
+          "mob": "+370 618 73017",
+          "mailHref": "egle@toten-transport.lt",
+          "mail": "egle@toten-transport.lt"
+        }
+      ]
+}
