@@ -10,7 +10,7 @@ const LanguageSelectBtn = () => {
         <Button
           variant="outline"
           size="xs"
-          compact
+          compact="true"
           onClick={() => setSelectedLanguage(`${selectedLanguage === 'ltu' ? 'eng' : 'ltu'}`)}
         >
           {selectedLanguage === 'ltu' ? 'ENG' : 'LTU'}
