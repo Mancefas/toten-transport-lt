@@ -14,7 +14,7 @@ export function Header() {
   const { selectedLanguage } = useLanguageContext();
 
   return (
-    <Box pb={120}>
+    <Box py={10}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           {/* Company logo */}
