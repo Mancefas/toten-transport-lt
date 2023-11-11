@@ -8,6 +8,7 @@ import HeroSection from '@/components/HeroSection/HeroSection';
 import Features from '@/components/Features/Features';
 import AboutUs from '@/components/AboutUs/AboutUs';
 import ContactsAccordion from '@/components/ContactsAccordion/ContactsAccordion';
+import GoogleMapsIframe from '@/components/GoogleMapsIframe/GoogleMapsIframe';
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Features />
       <AboutUs />
       <ContactsAccordion />
+      <GoogleMapsIframe />
       <Welcome />
       <ColorSchemeToggle />
       <Footer />
