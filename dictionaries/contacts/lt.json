@@ -1,0 +1,85 @@
+[
+    {
+      "id": "INo",
+      "name": "Reguliarūs dalinių ir pilnų krovinių gabenimo maršrutai į Norvegiją ir Švediją.",
+      "person": "Jolita",
+      "mobHref": "+37069930371",
+      "mob": "+370 699 30371",
+      "mailHref": "scand@toten-transport.lt",
+      "mail": "scand@toten-transport.lt"
+    },
+    {
+      "id": "IsNo",
+      "name": "Pastovūs dalinių ir pilnų krovinių pervežimai iš Norvegijos bei Švedijos.",
+      "person": "Violeta",
+      "mobHref": "+370608569900",
+      "mob": "+370 685 69900",
+      "mailHref": "scand@toten-transport.lt",
+      "mail": "scand@toten-transport.lt"
+    },
+    {
+      "id": "Muit",
+      "name": "Muitinės eksporto/importo deklaracijos Kaune, Intrastat pildymas.",
+      "person": "Deimantas",
+      "mobHref": "+37068564205",
+      "mob": "+370 685 64205",
+      "mailHref": "cust@toten-transport.lt",
+      "mail": "cust@toten-transport.lt"
+    },
+    {
+      "id": "Kiti",
+      "name": "Kitos kryptys. Negabaritiniai kroviniai, spec krovinių gabenimas.",
+      "person": "Kęstutis",
+      "mobHref": "+37069838550",
+      "mob": "+370 698 38550",
+      "mailHref": "k.baltakis@toten-transport.lt",
+      "mail": "k.baltakis@toten-transport.lt"
+    },
+    {
+      "id": "Fin",
+      "name": "Krovinių gabenimas Suomijos kryptimis, kelto bilietų užsakymai.",
+      "person": "Jurgita",
+      "mobHref": "+37069962074",
+      "mob": "+370 699 62074",
+      "mailHref": "fin@toten-transport.lt",
+      "mail": "fin@toten-transport.lt"
+    },
+    {
+      "id": "Buh",
+      "name": "Buhalterija. Finansai. Sąskaitos.",
+      "person": "Sonata",
+      "mobHref": "+37069983248",
+      "mob": "+370 699 83248",
+      "mailHref": "sonata@toten-transport.lt",
+      "mail": "sonata@toten-transport.lt",
+      "mailHref2": "invoice@toten-transport.lt",
+      "mail2": "sąskaitoms - invoice@toten-transport.lt"
+    },
+    {
+      "id": "Rel",
+      "name": "Santykiai su vežėjais, rinkodara, spec. pasiūlymai.",
+      "person": "Audrius",
+      "mobHref": "+37069944422",
+      "mob": "+370 699 44422",
+      "mailHref": "audrius@toten-transport.lt",
+      "mail": "audrius@toten-transport.lt"
+    },
+    {
+      "id": "Sand",
+      "name": "Sandėliavimas, perkrovimas.",
+      "person": "Gintaras",
+      "mobHref": "+37069990014",
+      "mob": "+370 699 90014",
+      "mailHref": "sandelis@toten-transport.lt",
+      "mail": "sandelis@toten-transport.lt"
+    },
+    {
+      "id": "Vad",
+      "name": "Vadovas.",
+      "person": "Eglė",
+      "mobHref": "+37061873017",
+      "mob": "+370 618 73017",
+      "mailHref": "egle@toten-transport.lt",
+      "mail": "egle@toten-transport.lt"
+    }
+  ]
