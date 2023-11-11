@@ -2,10 +2,11 @@ import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
+import { LanguageProvider } from '../context/LanguageContext';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Change this title',
+  description: 'Add description!',
 };
 
 export default function RootLayout({ children }: { children: any }) {
@@ -20,7 +21,9 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <LanguageProvider>
+          <MantineProvider theme={theme}>{children}</MantineProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

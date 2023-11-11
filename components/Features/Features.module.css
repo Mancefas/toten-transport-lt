@@ -1,0 +1,11 @@
+.boxForGrid {
+    min-height: 45vh;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+.iconColor {
+    /* change color to theme variable  */
+    color: #E31937;
+}

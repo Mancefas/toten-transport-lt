@@ -1,0 +1,26 @@
+[
+    {
+      "id": "1",
+      "featureHeading": "Didelė patirtis pervežimuose",
+      "featureText": "Pervežimus į Skandinavijos šalis vykdome nuo 2000m. Nuo 2017m. esame Toten Transport grupės padalinys.",
+      "featureIcon": "certificat"
+    },
+    {
+      "id": "2",
+      "featureHeading": "Reguliarūs reisai",
+      "featureText": "Vykstame į Švediją, Norvegiją 2 kartus savaitėje.Reguliarūs reisai iš šiaurės Norvegijos kiekvieną savaitę.",
+      "featureIcon": "calendar"
+    },
+    {
+      "id": "3",
+      "featureHeading": "Muitinės tarpininkavimas",
+      "featureText": "Tvarkome muitinės eksporto, importo ir kitus muitinės formalumus. Tiek Lietuvoje, tiek Norvegijoje.",
+      "featureIcon": "file"
+    },
+    {
+      "id": "4",
+      "featureHeading": "Sandėliavimas, perkrovimai",
+      "featureText": "Sandėlis Kaune (Palemono 171) ir Norvegijoje (Oslo)",
+      "featureIcon": "warehouse"
+    }
+  ]

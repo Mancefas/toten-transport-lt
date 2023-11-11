@@ -1,0 +1,41 @@
+.mainBgPhoto {
+    position: relative;
+    height: 100vh;
+  }
+.mainBgPhoto::before {
+    content: "";
+    position: absolute;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    background-image: url(../../public/Pagrindine_foto.jpg);
+    background-size: cover;
+    filter: brightness(0.75) blur(2px);
+  }
+
+.zIndex {
+    z-index: 1;
+}
+
+.mainText {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--mantine-color-white);
+    
+    @media (max-width: 600px) {
+      font-size: 1.5rem;
+    }
+}
+
+.icons {
+  color: var(--mantine-color-white);
+}
+
+.box {
+  color: var(--mantine-color-red-7);
+  transform: translateY(-5px);
+}
+
+.forklift {
+  transform: translateX(23px);
+}
