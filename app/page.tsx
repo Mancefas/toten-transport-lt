@@ -10,15 +10,22 @@ import AboutUs from '@/components/AboutUs/AboutUs';
 import ContactsAccordion from '@/components/ContactsAccordion/ContactsAccordion';
 import GoogleMapsIframe from '@/components/GoogleMapsIframe/GoogleMapsIframe';
 
+import aboutTranslations from '../dictionaries/about/lt.json'
+import contactsTranslations from '../dictionaries/contacts/lt.json'
+import featuresTranslations from '../dictionaries/features/lt.json'
+import googleMapsTranslations from '../dictionaries/maps/lt.json'
+import headerTranslations from '../dictionaries/header/lt.json'
+import heroSectionTranslations from '../dictionaries/hero/lt.json'
+
 export default function HomePage() {
   return (
     <>
-      <Header />
-      <HeroSection />
-      <Features />
-      <AboutUs />
-      <ContactsAccordion />
-      <GoogleMapsIframe />
+      <Header text={headerTranslations} />
+      <HeroSection text={heroSectionTranslations} />
+      <Features text={featuresTranslations} />
+      <AboutUs text={aboutTranslations} />
+      <ContactsAccordion text={contactsTranslations} />
+      <GoogleMapsIframe text={googleMapsTranslations}/>
       <Welcome />
       <ColorSchemeToggle />
       <Footer />

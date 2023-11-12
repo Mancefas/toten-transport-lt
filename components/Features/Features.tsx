@@ -6,10 +6,7 @@ import {
 } from '@tabler/icons-react';
 import { Card, Text, Box, SimpleGrid } from '@mantine/core';
 
-import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './Features.module.css';
-import ltTranslation from '../../dictionaries/features/lt.json';
-import enTranslation from '../../dictionaries/features/en.json';
 
 // to map icon for feature
 type FeatureIcon = 'certificat' | 'calendar' | 'file' | 'warehouse';
@@ -21,13 +18,13 @@ const iconComponents: Record<FeatureIcon, JSX.Element> = {
 };
 
 // Feature item
-type featureProps = {
+type SingleFeatureProps = {
   id: string;
   featureHeading: string;
   featureText: string;
   featureIcon: string;
 };
-const singleFeature = (feature: featureProps) => (
+const SingleFeature = (feature: SingleFeatureProps) => (
   <Box py="lg" key={feature.id}>
     <Card shadow="sm" p="lg" radius="md" withBorder h="100%">
       <Card.Section ta="center" className={classes.iconColor}>
@@ -45,16 +42,17 @@ const singleFeature = (feature: featureProps) => (
   </Box>
 );
 
-const Features = () => {
-  const { selectedLanguage } = useLanguageContext();
+type FeaturesProps = { 
+  text: SingleFeatureProps[] 
+}
+
+const Features = ({text}: FeaturesProps) => {
 
   return (
     <div className={classes.boxForGrid}>
       <Box px="lg">
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }}>
-          {selectedLanguage === 'ltu'
-            ? ltTranslation.map((feature) => singleFeature(feature))
-            : enTranslation.map((feature) => singleFeature(feature))}
+          {text && text.map((feature: SingleFeatureProps) => SingleFeature(feature))}
         </SimpleGrid>
       </Box>
     </div>

@@ -2,14 +2,20 @@ import Link from 'next/link';
 import { IconTruck, IconForklift, IconLicense, IconPackage } from '@tabler/icons-react';
 import { Container, Group, Button, Box, Title, Stack } from '@mantine/core';
 
-import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './HeroSection.module.css';
-import ltText from '@/dictionaries/hero/lt.json';
-import enText from '@/dictionaries/hero/en.json';
 
-const HeroSection = () => {
-  const { selectedLanguage } = useLanguageContext();
+type HeroSectionProps = {
+  text: {
+    firstText: string;
+    secondText: string;
+    btnText: string;
+    btnLink: string;
+  }
+}
+
+const HeroSection = ({text}: HeroSectionProps) => {
   const totenColor = '#E31937';
+  const { firstText, secondText, btnText, btnLink } = text;
 
   return (
     <Stack justify="center" gap="xl" className={classes.mainBgPhoto}>
@@ -27,13 +33,13 @@ const HeroSection = () => {
       <Container className={classes.zIndex}>
         <Box w="80%" m="auto">
           <Title className={classes.mainText}>
-            {selectedLanguage === 'ltu' ? ltText.firstText : enText.firstText}
+            {firstText}
           </Title>
         </Box>
 
         {/* Call to action btn */}
         <Box mt="lg" m="auto" ta="center">
-          <Link href="/kontaktai" passHref>
+         {text &&  <Link href={btnLink} passHref>
             <Button
               component="a"
               variant="gradient"
@@ -41,9 +47,9 @@ const HeroSection = () => {
               radius="md"
               size="lg"
             >
-              {selectedLanguage === 'ltu' ? ltText.btnText : enText.btnText}
+              {btnText}
             </Button>
-          </Link>
+          </Link>}
         </Box>
       </Container>
     </Stack>

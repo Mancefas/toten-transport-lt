@@ -1,10 +1,7 @@
 import { IconPhoneCall, IconMail, IconUser } from '@tabler/icons-react';
 import { Accordion, Container, Box, Text, Group, Stack } from '@mantine/core';
 
-import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './ContactsAccordion.module.css';
-import ltTranslation from '@/dictionaries/contacts/lt.json';
-import enTranslation from '@/dictionaries/contacts/en.json';
 
 const totenColor = '#E31937';
 
@@ -20,34 +17,34 @@ type AccordionItemProps = {
   mailHref2?: string;
   mail2?: string;
 };
-const item = (contact: AccordionItemProps) => (
-  <Accordion.Item value={contact.id} key={contact.id}>
-    <Accordion.Control>{contact.name}</Accordion.Control>
+const AccordionItem = ({id, name, person, mobHref, mob, mailHref, mail, mailHref2 = '', mail2 = ''}: AccordionItemProps) => (
+  <Accordion.Item value={id} key={id}>
+    <Accordion.Control>{name}</Accordion.Control>
     <Accordion.Panel>
       <Box ta="center">
         <Stack justify="center" gap="xs">
           <Group justify="center">
             <IconUser size="24" color={totenColor} />
             <Text tt="uppercase" fw={500}>
-              {contact.person}
+              {person}
             </Text>
           </Group>
 
           <Group justify="center" gap="xs">
             <IconPhoneCall size="16" color={totenColor} />
-            <a href={`tel:${contact.mobHref}`}>{`Mob.${contact.mob}`}</a>
+            <a href={`tel:${mobHref}`}>{`Mob.${mob}`}</a>
             <br />
           </Group>
 
           <Group justify="center" gap="xs">
             <IconMail size="16" color={totenColor} />
-            <a href={`mailto:${contact.mailHref}`}>{contact.mail}</a>
+            <a href={`mailto:${mailHref}`}>{mail}</a>
           </Group>
 
-          {contact.mail2 && (
+          {mail2 && (
             <Group justify="center" gap="xs">
               <IconMail size="16" color={totenColor} />
-              <a href={`mailto:${contact.mailHref2}`}>{contact.mail2}</a>
+              <a href={`mailto:${mailHref2}`}>{mail2}</a>
             </Group>
           )}
         </Stack>
@@ -56,8 +53,11 @@ const item = (contact: AccordionItemProps) => (
   </Accordion.Item>
 );
 
-const ContactsAccordion = () => {
-  const { selectedLanguage } = useLanguageContext();
+type ContactsAccordionProps = {
+  text: AccordionItemProps[];
+};
+
+const ContactsAccordion = ({text}: ContactsAccordionProps) => {
 
   return (
     <Container size="sm" className={classes.accordionContainer}>
@@ -65,9 +65,7 @@ const ContactsAccordion = () => {
         <IconPhoneCall size="32" color="green" />
       </Box>
       <Accordion>
-        {selectedLanguage === 'ltu'
-          ? ltTranslation.map((contact) => item(contact))
-          : enTranslation.map((contact) => item(contact))}
+        {text && text.map((item: AccordionItemProps) => AccordionItem(item))}
       </Accordion>
     </Container>
   );

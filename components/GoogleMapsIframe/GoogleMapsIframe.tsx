@@ -1,17 +1,14 @@
 import { SimpleGrid, Container, Center, Text } from '@mantine/core';
 
-import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './GoogleMapsIframe.module.css';
-import ltTranslation from '@/dictionaries/maps/lt.json';
-import enTranslation from '@/dictionaries/maps/en.json';
 
 // single item
-type singeItemProps = {
+type SingeItemProps = {
   title: string;
   mapPlace: string;
   iframeTitle: string;
 };
-const SingleItem = (data: singeItemProps) => (
+const SingleItem = (data: SingeItemProps) => (
   <Center style={{ flexDirection: 'column' }} key={data.title}>
     <Text size="lg" fw="500">
       {data.title}
@@ -26,15 +23,16 @@ const SingleItem = (data: singeItemProps) => (
   </Center>
 );
 
-const GoogleMapsIframe = () => {
-  const { selectedLanguage } = useLanguageContext();
+type PropsType = {
+  text: SingeItemProps[]
+}
+
+const GoogleMapsIframe = ({text}: PropsType) => {
 
   return (
     <Container size="sm" pb="lg">
       <SimpleGrid spacing="lg" cols={{ base: 1, sm: 2 }}>
-        {selectedLanguage === 'ltu'
-          ? ltTranslation.map((place) => SingleItem(place))
-          : enTranslation.map((place) => SingleItem(place))}
+        {text && text.map((place) => SingleItem(place))}
       </SimpleGrid>
     </Container>
   );

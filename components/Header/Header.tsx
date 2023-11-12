@@ -4,14 +4,19 @@ import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem } from '@mantine/c
 import { useDisclosure } from '@mantine/hooks';
 
 import classes from './Header.module.css';
-import { useLanguageContext } from '@/context/LanguageContext';
 import LanguageSelectBtn from '../LanguageSelectBtn/LanguageSelectBtn';
-import ltTranslation from '../../dictionaries/header/lt.json';
-import enTranslation from '../../dictionaries/header/en.json';
 
-export function Header() {
+
+type HeaderProps = {
+  text: {
+    about: string;
+    contacts: string;
+  }
+}
+
+export function Header({text} : HeaderProps) {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-  const { selectedLanguage } = useLanguageContext();
+  const {about, contacts} = text;
 
   return (
     <Box py={10}>
@@ -31,12 +36,12 @@ export function Header() {
           {/* Navigation items */}
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="/" className={classes.link}>
-              {selectedLanguage === 'ltu' ? ltTranslation.about : enTranslation.about}
+            <a href={about} className={classes.link}>
+              {about}
             </a>
 
-            <a href="#" className={classes.link}>
-              {selectedLanguage === 'ltu' ? ltTranslation.contacts : enTranslation.contacts}
+            <a href={contacts} className={classes.link}>
+              {contacts}
             </a>
           </Group>
 
@@ -61,13 +66,13 @@ export function Header() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <a href="/" className={classes.link}>
-            {selectedLanguage === 'ltu' ? ltTranslation.about : enTranslation.about}
-          </a>
+          <a href={about} className={classes.link}>
+              {about}
+            </a>
 
-          <a href="#" className={classes.link}>
-            {selectedLanguage === 'ltu' ? ltTranslation.contacts : enTranslation.contacts}
-          </a>
+            <a href={contacts} className={classes.link}>
+              {contacts}
+            </a>
 
           <Divider my="sm" />
 
