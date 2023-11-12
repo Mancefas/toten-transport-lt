@@ -3,8 +3,8 @@ import { Accordion, Container, Box, Text, Group, Stack } from '@mantine/core';
 
 import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './ContactsAccordion.module.css';
-import * as ltTranslation from '@/dictionaries/contacts/lt.json';
-import * as enTranslation from '@/dictionaries/contacts/en.json';
+import ltTranslation from '@/dictionaries/contacts/lt.json';
+import enTranslation from '@/dictionaries/contacts/en.json';
 
 const totenColor = '#E31937';
 

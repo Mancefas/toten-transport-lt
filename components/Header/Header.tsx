@@ -6,8 +6,8 @@ import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
 import { useLanguageContext } from '@/context/LanguageContext';
 import LanguageSelectBtn from '../LanguageSelectBtn/LanguageSelectBtn';
-import * as ltTranslation from '../../dictionaries/header/lt.json';
-import * as enTranslation from '../../dictionaries/header/en.json';
+import ltTranslation from '../../dictionaries/header/lt.json';
+import enTranslation from '../../dictionaries/header/en.json';
 
 export function Header() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);

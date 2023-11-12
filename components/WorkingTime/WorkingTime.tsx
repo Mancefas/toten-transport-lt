@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Group, Stack, Text, Card, Popover, Flex } from '@mantine/core';
 
 import { useLanguageContext } from '@/context/LanguageContext';
-import * as ltTranslation from '@/dictionaries/footer/lt.json';
-import * as enTranslation from '@/dictionaries/footer/en.json';
+import ltTranslation from '@/dictionaries/footer/lt.json';
+import enTranslation from '@/dictionaries/footer/en.json';
 
 const WorkingTime = () => {
   const { selectedLanguage } = useLanguageContext();
@@ -23,7 +23,7 @@ const WorkingTime = () => {
               <Stack>
                 {selectedLanguage === 'ltu' &&
                   ltTranslation.weekdays.map((day) => (
-                    <Flex gap="sm" justify="center">
+                    <Flex gap="sm" justify="center" key={day}>
                       <Text>{day}</Text> <Text>{ltTranslation.time}</Text>
                     </Flex>
                   ))}

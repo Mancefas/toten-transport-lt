@@ -2,8 +2,8 @@ import { Container, Title, Text, Box } from '@mantine/core';
 
 import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './AboutUs.module.css';
-import * as ltTranslation from '@/dictionaries/about/lt.json';
-import * as enTranslation from '@/dictionaries/about/en.json';
+import ltTranslation from '@/dictionaries/about/lt.json';
+import enTranslation from '@/dictionaries/about/en.json';
 
 // text paragraph item
 type propType = {

@@ -2,8 +2,8 @@ import { SimpleGrid, Container, Center, Text } from '@mantine/core';
 
 import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './GoogleMapsIframe.module.css';
-import * as ltTranslation from '@/dictionaries/maps/lt.json';
-import * as enTranslation from '@/dictionaries/maps/en.json';
+import ltTranslation from '@/dictionaries/maps/lt.json';
+import enTranslation from '@/dictionaries/maps/en.json';
 
 // single item
 type singeItemProps = {
@@ -12,7 +12,7 @@ type singeItemProps = {
   iframeTitle: string;
 };
 const SingleItem = (data: singeItemProps) => (
-  <Center style={{ flexDirection: 'column' }}>
+  <Center style={{ flexDirection: 'column' }} key={data.title}>
     <Text size="lg" fw="500">
       {data.title}
     </Text>

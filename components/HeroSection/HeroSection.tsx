@@ -4,8 +4,8 @@ import { Container, Group, Button, Box, Title, Stack } from '@mantine/core';
 
 import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './HeroSection.module.css';
-import * as ltText from '@/dictionaries/hero/lt.json';
-import * as enText from '@/dictionaries/hero/en.json';
+import ltText from '@/dictionaries/hero/lt.json';
+import enText from '@/dictionaries/hero/en.json';
 
 const HeroSection = () => {
   const { selectedLanguage } = useLanguageContext();

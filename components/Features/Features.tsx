@@ -8,8 +8,8 @@ import { Card, Text, Box, SimpleGrid } from '@mantine/core';
 
 import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './Features.module.css';
-import * as ltTranslation from '../../dictionaries/features/lt.json';
-import * as enTranslation from '../../dictionaries/features/en.json';
+import ltTranslation from '../../dictionaries/features/lt.json';
+import enTranslation from '../../dictionaries/features/en.json';
 
 // to map icon for feature
 type FeatureIcon = 'certificat' | 'calendar' | 'file' | 'warehouse';
@@ -28,7 +28,7 @@ type featureProps = {
   featureIcon: string;
 };
 const singleFeature = (feature: featureProps) => (
-  <Box py="lg">
+  <Box py="lg" key={feature.id}>
     <Card shadow="sm" p="lg" radius="md" withBorder h="100%">
       <Card.Section ta="center" className={classes.iconColor}>
         {iconComponents[feature.featureIcon as FeatureIcon]}
