@@ -1,5 +1,11 @@
 {
-    "weekdays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "time": "9:00 - 17:00",
-    "working": "Opening hours"
+    "workingTime":
+        { "weekdays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "time": "9:00 - 17:00",
+            "working": "Opening hours"},
+    "rights": "All rights reserved",
+    "links": [
+        { "link": "https://www.facebook.com/nordcarrier.lt", "label": "Facebook" },
+        { "link": "#", "label": "Google" }
+      ]
 }

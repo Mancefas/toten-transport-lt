@@ -1,19 +1,19 @@
 import React from 'react';
 import { Container, Group, Stack, Text, Card, Popover, Flex } from '@mantine/core';
 
-import { useLanguageContext } from '@/context/LanguageContext';
-import ltTranslation from '@/dictionaries/footer/lt.json';
-import enTranslation from '@/dictionaries/footer/en.json';
+type Props = {
+  workingTime: {weekdays: string[], time: string, working: string};
+};
 
-const WorkingTime = () => {
-  const { selectedLanguage } = useLanguageContext();
+const WorkingTime = ({workingTime}: Props) => {
+  const { weekdays, time, working } = workingTime;
 
   return (
     <Container size="sm">
       <Popover position="bottom">
         <Popover.Target>
           <Text size="md" className="nc-blue" style={{ cursor: 'pointer' }}>
-            {selectedLanguage === 'ltu' ? ltTranslation.working : enTranslation.working}
+            {working}
           </Text>
         </Popover.Target>
 
@@ -21,16 +21,10 @@ const WorkingTime = () => {
           <Card withBorder radius="sm">
             <Group>
               <Stack>
-                {selectedLanguage === 'ltu' &&
-                  ltTranslation.weekdays.map((day) => (
+                {
+                  weekdays.map((day) => (
                     <Flex gap="sm" justify="center" key={day}>
-                      <Text>{day}</Text> <Text>{ltTranslation.time}</Text>
-                    </Flex>
-                  ))}
-                {selectedLanguage === 'eng' &&
-                  enTranslation.weekdays.map((day) => (
-                    <Flex gap="sm" justify="center">
-                      <Text>{day}</Text> <Text>{enTranslation.time}</Text>
+                      <Text>{day}</Text> <Text>{time}</Text>
                     </Flex>
                   ))}
               </Stack>

@@ -1,16 +1,17 @@
 import { Container, Group, Anchor, Text } from '@mantine/core';
 import classes from './Footer.module.css';
-import { useLanguageContext } from '@/context/LanguageContext';
 import WorkingTime from '../WorkingTime/WorkingTime';
 
-const links = [
-  { link: 'https://www.facebook.com/nordcarrier.lt', label: 'Facebook' },
-  { link: '#', label: 'Google' },
-  { link: 'https://rekvizitai.vz.lt/imone/nordcarrier_baltic/', label: 'Rekvizitai' },
-];
+type FooterProps = {
+  text: {
+      workingTime: {weekdays: string[], time: string, working: string};
+      rights: string;
+      links: { link: string; label: string;}[];
+  }
+}
 
-export function Footer() {
-  const { selectedLanguage } = useLanguageContext();
+export function Footer({text}: FooterProps) {
+  const { workingTime, rights, links } = text;
 
   const items = links.map((link) => (
     <Anchor<'a'>
@@ -29,9 +30,9 @@ export function Footer() {
       <Container className={classes.inner}>
         <Text size="md">
           ©️ {new Date().getFullYear()}{' '}
-          {selectedLanguage === 'ltu' ? 'Visos teisės saugomos' : 'All rights reserved'}{' '}
+          {rights}
         </Text>
-        <WorkingTime />
+        <WorkingTime workingTime={workingTime} />
         <Group className={classes.links}>{items}</Group>
       </Container>
     </div>
