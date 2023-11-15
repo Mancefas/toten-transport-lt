@@ -1,6 +1,6 @@
 import { Button } from '@mantine/core';
 
-import { useLanguageContext } from '../../context/LanguageContext';
+import { useLanguageContext } from '@/context/LanguageContext';
 
 const LanguageSelectBtn = () => {
   const { selectedLanguage, setSelectedLanguage } = useLanguageContext();

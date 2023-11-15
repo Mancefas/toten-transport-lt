@@ -1,22 +1,23 @@
 'use client';
 
-import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem } from '@mantine/core';
+import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem, NavLink } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 import classes from './Header.module.css';
-import LanguageSelectBtn from '../LanguageSelectBtn/LanguageSelectBtn';
-
 
 type HeaderProps = {
-  text: {
-    about: string;
-    contacts: string;
-  }
+  text: 
+  { navLinks: { name: string; linksTo: string; }[],
+    languageLinks: { name: string; linksTo: string; }[]
+ }
 }
 
 export function Header({text} : HeaderProps) {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-  const {about, contacts} = text;
+  const {navLinks} = text;
+
+  const navigationLinks = navLinks.map(({linksTo, name}) => (<a href={linksTo} className={classes.link}>{name}</a>))
+  const languageLinks = text.languageLinks.map(({linksTo, name}) => (<a href={linksTo} className={classes.link}>{name}</a>))
 
   return (
     <Box py={10}>
@@ -36,17 +37,11 @@ export function Header({text} : HeaderProps) {
           {/* Navigation items */}
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href={about} className={classes.link}>
-              {about}
-            </a>
-
-            <a href={contacts} className={classes.link}>
-              {contacts}
-            </a>
+            {navigationLinks}
           </Group>
 
           <Group visibleFrom="sm">
-            <LanguageSelectBtn />
+            {languageLinks}
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -65,19 +60,11 @@ export function Header({text} : HeaderProps) {
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
-
-          <a href={about} className={classes.link}>
-              {about}
-            </a>
-
-            <a href={contacts} className={classes.link}>
-              {contacts}
-            </a>
-
+            {navigationLinks}
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            <LanguageSelectBtn />
+            {languageLinks}
           </Group>
         </ScrollArea>
       </Drawer>

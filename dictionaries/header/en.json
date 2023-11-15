@@ -1,4 +1,9 @@
 {
-    "about": "About us",
-    "contacts": "Contacts"
+    "navLinks": [
+        {"name": "About us", "linksTo": "/about-us"},
+        {"name": "Contacts", "linksTo": "/contacts"}
+    ],
+    "languageLinks" : [
+        {"name": "LTU", "linksTo": "/"}
+    ]
 }

@@ -1,4 +1,9 @@
 {
-    "about": "Apie mus",
-    "contacts": "Kontaktai"
+    "navLinks": [
+        {"name": "Apie mus", "linksTo": "/apie-mus"},
+        {"name": "Kontaktai", "linksTo": "/kontaktai"}
+    ],
+    "languageLinks" : [
+        {"name": "ENG", "linksTo": "/eng/"}
+    ]
 }
