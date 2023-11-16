@@ -1,6 +1,6 @@
 'use client';
 
-import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem, NavLink } from '@mantine/core';
+import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 import classes from './Header.module.css';
@@ -14,10 +14,19 @@ type HeaderProps = {
 
 export function Header({text} : HeaderProps) {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-  const {navLinks} = text;
+  const {navLinks, languageLinks} = text;
 
-  const navigationLinks = navLinks.map(({linksTo, name}) => (<a href={linksTo} className={classes.link}>{name}</a>))
-  const languageLinks = text.languageLinks.map(({linksTo, name}) => (<a href={linksTo} className={classes.link}>{name}</a>))
+  const navigationLinks = navLinks.map(({linksTo, name}) => (<a href={linksTo} className={classes.link} key={name}>{name}</a>))
+  const langLinks = languageLinks.map(({linksTo, name}) => 
+  (<Button 
+    component='a'
+    size="compact-xs"
+    color="red"
+    radius="xl"
+    href={linksTo} 
+    key={name}>
+      {name}
+    </Button>))
 
   return (
     <Box py={10}>
@@ -41,7 +50,7 @@ export function Header({text} : HeaderProps) {
           </Group>
 
           <Group visibleFrom="sm">
-            {languageLinks}
+            {langLinks}
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -64,7 +73,7 @@ export function Header({text} : HeaderProps) {
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            {languageLinks}
+            {langLinks}
           </Group>
         </ScrollArea>
       </Drawer>

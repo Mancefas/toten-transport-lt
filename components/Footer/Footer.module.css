@@ -1,5 +1,5 @@
 .footer {
-    margin-top: rem(120px);
+    height: fit-content;
     border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
   }
   
@@ -11,7 +11,7 @@
     padding-bottom: var(--mantine-spacing-xl);
 }
   
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .inner {
         flex-direction: column;
         gap: 1rem;

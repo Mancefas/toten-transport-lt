@@ -1,3 +1,5 @@
+'use client';
+
 import { Container, Group, Anchor, Text } from '@mantine/core';
 import classes from './Footer.module.css';
 import WorkingTime from '../WorkingTime/WorkingTime';
@@ -15,11 +17,9 @@ export function Footer({text}: FooterProps) {
 
   const items = links.map((link) => (
     <Anchor<'a'>
-      c="dimmed"
+      target="_blank"
       key={link.label}
       href={link.link}
-      onClick={(event) => event.preventDefault()}
-      size="sm"
     >
       {link.label}
     </Anchor>

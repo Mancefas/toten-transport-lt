@@ -15,7 +15,7 @@ type HeroSectionProps = {
 
 const HeroSection = ({text}: HeroSectionProps) => {
   const totenColor = '#E31937';
-  const { firstText, secondText, btnText, btnLink } = text;
+  const { firstText, btnText, btnLink } = text;
 
   return (
     <Stack justify="center" gap="xl" className={classes.mainBgPhoto}>
