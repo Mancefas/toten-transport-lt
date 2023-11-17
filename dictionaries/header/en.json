@@ -1,7 +1,7 @@
 {
     "navLinks": [
-        {"name": "About us", "linksTo": "en/about-us"},
-        {"name": "Contacts", "linksTo": "en/contacts"}
+        {"name": "About us", "linksTo": "eng/about-us"},
+        {"name": "Contacts", "linksTo": "eng/contacts"}
     ],
     "languageLinks" : [
         {"name": "LTU", "linksTo": "/"}

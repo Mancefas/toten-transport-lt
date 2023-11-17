@@ -1,9 +1,9 @@
 {
     "navLinks": [
-        {"name": "Apie mus", "linksTo": "/apie-mus"},
-        {"name": "Kontaktai", "linksTo": "/kontaktai"}
+        {"name": "Apie mus", "linksTo": "apie-mus"},
+        {"name": "Kontaktai", "linksTo": "kontaktai"}
     ],
     "languageLinks" : [
-        {"name": "ENG", "linksTo": "/eng/"}
+        {"name": "ENG", "linksTo": "/eng"}
     ]
 }

@@ -5,15 +5,15 @@ import { theme } from '@/theme';
 import { Header } from '@/components/Header/Header';
 import { Footer } from '@/components/Footer/Footer';
 
-import headerTranslations from '@/dictionaries/header/lt.json';
-import footerTranslations from '@/dictionaries/footer/lt.json';
-import metaDataTranslations from '@/dictionaries/metaData/lt.json';
+import headerTranslations from '@/dictionaries/header/en.json';
+import footerTranslations from '@/dictionaries/footer/en.json';
+import metaDataTranslations from '@/dictionaries/metaData/en.json';
 
 export const metadata = metaDataTranslations;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="lt">
+    <html lang="en">
       <head>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />

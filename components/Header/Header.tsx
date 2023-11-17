@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
@@ -17,9 +18,9 @@ export function Header({ text }: HeaderProps) {
   const { navLinks, languageLinks } = text;
 
   const navigationLinks = navLinks.map(({ linksTo, name }) => (
-    <a href={linksTo} className={classes.link} key={name}>
+    <Link href={linksTo} className={classes.link} key={name}>
       {name}
-    </a>
+    </Link>
   ));
   const langLinks = languageLinks.map(({ linksTo, name }) => (
     <Button component="a" size="compact-xs" color="red" radius="xl" href={linksTo} key={name}>
