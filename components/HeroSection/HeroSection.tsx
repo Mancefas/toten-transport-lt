@@ -10,10 +10,10 @@ type HeroSectionProps = {
     secondText: string;
     btnText: string;
     btnLink: string;
-  }
-}
+  };
+};
 
-const HeroSection = ({text}: HeroSectionProps) => {
+const HeroSection = ({ text }: HeroSectionProps) => {
   const totenColor = '#E31937';
   const { firstText, btnText, btnLink } = text;
 
@@ -32,24 +32,24 @@ const HeroSection = ({text}: HeroSectionProps) => {
       {/* Main text */}
       <Container className={classes.zIndex}>
         <Box w="80%" m="auto">
-          <Title className={classes.mainText}>
-            {firstText}
-          </Title>
+          <Title className={classes.mainText}>{firstText}</Title>
         </Box>
 
         {/* Call to action btn */}
         <Box mt="lg" m="auto" ta="center">
-         {text &&  <Link href={btnLink} passHref>
-            <Button
-              component="a"
-              variant="gradient"
-              gradient={{ from: '#cc9494', to: `${totenColor}`, deg: 60 }}
-              radius="md"
-              size="lg"
-            >
-              {btnText}
-            </Button>
-          </Link>}
+          {text && (
+            <Link href={btnLink} passHref>
+              <Button
+                component="a"
+                variant="gradient"
+                gradient={{ from: '#cc9494', to: `${totenColor}`, deg: 60 }}
+                radius="md"
+                size="lg"
+              >
+                {btnText}
+              </Button>
+            </Link>
+          )}
         </Box>
       </Container>
     </Stack>

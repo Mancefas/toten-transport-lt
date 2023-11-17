@@ -4,19 +4,19 @@ import classes from './AboutUs.module.css';
 // text paragraph item
 type PropType = {
   text: {
-        firstText: string;
-        secondText: string;
-        totenText: string;
-        code: string;
-        vat: string;
-        address: string;
-        phone: string;
-        email: string;}
+    firstText: string;
+    secondText: string;
+    totenText: string;
+    code: string;
+    vat: string;
+    address: string;
+    phone: string;
+    email: string;
+  };
 };
 
-
 const AboutUs = ({ text }: PropType) => {
-  const {firstText, secondText, totenText, code, vat, address, phone, email} = text;
+  const { firstText, secondText, totenText, code, vat, address, phone, email } = text;
 
   return (
     <Container size="md" className={classes.container}>
@@ -53,7 +53,6 @@ const AboutUs = ({ text }: PropType) => {
           {email} - <b>info@toten-transport.lt</b>
         </Text>
       </Box>
-
     </Container>
   );
 };

@@ -17,7 +17,17 @@ type AccordionItemProps = {
   mailHref2?: string;
   mail2?: string;
 };
-const AccordionItem = ({id, name, person, mobHref, mob, mailHref, mail, mailHref2 = '', mail2 = ''}: AccordionItemProps) => (
+const AccordionItem = ({
+  id,
+  name,
+  person,
+  mobHref,
+  mob,
+  mailHref,
+  mail,
+  mailHref2 = '',
+  mail2 = '',
+}: AccordionItemProps) => (
   <Accordion.Item value={id} key={id}>
     <Accordion.Control>{name}</Accordion.Control>
     <Accordion.Panel>
@@ -57,18 +67,13 @@ type ContactsAccordionProps = {
   text: AccordionItemProps[];
 };
 
-const ContactsAccordion = ({text}: ContactsAccordionProps) => {
-
-  return (
-    <Container size="sm" className={classes.accordionContainer}>
-      <Box ta="center">
-        <IconPhoneCall size="32" color="green" />
-      </Box>
-      <Accordion>
-        {text && text.map((item: AccordionItemProps) => AccordionItem(item))}
-      </Accordion>
-    </Container>
-  );
-};
+const ContactsAccordion = ({ text }: ContactsAccordionProps) => (
+  <Container size="sm" className={classes.accordionContainer}>
+    <Box ta="center">
+      <IconPhoneCall size="32" color="green" />
+    </Box>
+    <Accordion>{text && text.map((item: AccordionItemProps) => AccordionItem(item))}</Accordion>
+  </Container>
+);
 
 export default ContactsAccordion;

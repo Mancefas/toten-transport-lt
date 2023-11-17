@@ -2,10 +2,10 @@ import React from 'react';
 import { Container, Group, Stack, Text, Card, Popover, Flex } from '@mantine/core';
 
 type Props = {
-  workingTime: {weekdays: string[], time: string, working: string};
+  workingTime: { weekdays: string[]; time: string; working: string };
 };
 
-const WorkingTime = ({workingTime}: Props) => {
+const WorkingTime = ({ workingTime }: Props) => {
   const { weekdays, time, working } = workingTime;
 
   return (
@@ -21,12 +21,11 @@ const WorkingTime = ({workingTime}: Props) => {
           <Card withBorder radius="sm">
             <Group>
               <Stack>
-                {
-                  weekdays.map((day) => (
-                    <Flex gap="sm" justify="center" key={day}>
-                      <Text>{day}</Text> <Text>{time}</Text>
-                    </Flex>
-                  ))}
+                {weekdays.map((day) => (
+                  <Flex gap="sm" justify="center" key={day}>
+                    <Text>{day}</Text> <Text>{time}</Text>
+                  </Flex>
+                ))}
               </Stack>
             </Group>
           </Card>

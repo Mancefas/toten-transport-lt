@@ -24,18 +24,15 @@ const SingleItem = (data: SingeItemProps) => (
 );
 
 type PropsType = {
-  text: SingeItemProps[]
-}
-
-const GoogleMapsIframe = ({text}: PropsType) => {
-
-  return (
-    <Container size="sm" pb="lg">
-      <SimpleGrid spacing="lg" cols={{ base: 1, sm: 2 }}>
-        {text && text.map((place) => SingleItem(place))}
-      </SimpleGrid>
-    </Container>
-  );
+  text: SingeItemProps[];
 };
+
+const GoogleMapsIframe = ({ text }: PropsType) => (
+  <Container size="sm" pb="lg">
+    <SimpleGrid spacing="lg" cols={{ base: 1, sm: 2 }}>
+      {text && text.map((place) => SingleItem(place))}
+    </SimpleGrid>
+  </Container>
+);
 
 export default GoogleMapsIframe;

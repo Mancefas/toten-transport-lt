@@ -42,21 +42,18 @@ const SingleFeature = (feature: SingleFeatureProps) => (
   </Box>
 );
 
-type FeaturesProps = { 
-  text: SingleFeatureProps[] 
-}
-
-const Features = ({text}: FeaturesProps) => {
-
-  return (
-    <div className={classes.boxForGrid}>
-      <Box px="lg">
-        <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }}>
-          {text && text.map((feature: SingleFeatureProps) => SingleFeature(feature))}
-        </SimpleGrid>
-      </Box>
-    </div>
-  );
+type FeaturesProps = {
+  text: SingleFeatureProps[];
 };
+
+const Features = ({ text }: FeaturesProps) => (
+  <div className={classes.boxForGrid}>
+    <Box px="lg">
+      <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }}>
+        {text && text.map((feature: SingleFeatureProps) => SingleFeature(feature))}
+      </SimpleGrid>
+    </Box>
+  </div>
+);
 
 export default Features;
