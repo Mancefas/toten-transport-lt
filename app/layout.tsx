@@ -1,34 +1,11 @@
-import '@mantine/core/styles.css';
-import { ReactNode } from 'react';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { theme } from '@/theme';
-import { Header } from '@/components/Header/Header';
-import { Footer } from '@/components/Footer/Footer';
+import {ReactNode} from 'react';
 
-import headerTranslations from '@/dictionaries/header/lt.json';
-import footerTranslations from '@/dictionaries/footer/lt.json';
-import metaDataTranslations from '@/dictionaries/metaData/lt.json';
+type Props = {
+  children: ReactNode;
+};
 
-export const metadata = metaDataTranslations;
-
-export default function RootLayout({ children }: { children: ReactNode }) {
-  return (
-    <html lang="lt">
-      <head>
-        <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
-        />
-      </head>
-      <body>
-        <MantineProvider theme={theme}>
-          <Header text={headerTranslations} />
-          {children}
-          <Footer text={footerTranslations} />
-        </MantineProvider>
-      </body>
-    </html>
-  );
+// Since we have a `not-found.tsx` page on the root, a layout file
+// is required, even if it's just passing children through.
+export default function RootLayout({children}: Props) {
+  return children;
 }

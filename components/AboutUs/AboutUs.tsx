@@ -1,22 +1,9 @@
 import { Container, Title, Text, Box } from '@mantine/core';
 import classes from './AboutUs.module.css';
+import { useTranslations } from 'next-intl'
 
-// text paragraph item
-type PropType = {
-  text: {
-    firstText: string;
-    secondText: string;
-    totenText: string;
-    code: string;
-    vat: string;
-    address: string;
-    phone: string;
-    email: string;
-  };
-};
-
-const AboutUs = ({ text }: PropType) => {
-  const { firstText, secondText, totenText, code, vat, address, phone, email } = text;
+const AboutUs = () => {
+  const t = useTranslations('About')
 
   return (
     <Container size="md" className={classes.container}>
@@ -25,32 +12,32 @@ const AboutUs = ({ text }: PropType) => {
       </Title>
       {/* Paragraphs item */}
       <Box>
-        <Text>{firstText}</Text>
-        <Text>{totenText}</Text>
+        <Text>{t('firstText')}</Text>
+        <Text>{t('totenText')}</Text>
         <Text fw={500} py="lg">
-          {secondText}
+          {t('secondText')}
         </Text>
       </Box>
 
       <Box mt="lg">
         <Text>
-          {code} - <b>110842421</b>
+          {t('code')} - <b>110842421</b>
         </Text>
 
         <Text>
-          {vat} - <b>LT108424219</b>
+          {t('vat')} - <b>LT108424219</b>
         </Text>
 
         <Text>
-          {address} - <b>A.Juozapavičiaus pr 3B, Kaunas</b>
+          {t('address')} - <b>A.Juozapavičiaus pr 3B, Kaunas</b>
         </Text>
 
         <Text>
-          {phone} - <b>+370 37 302375</b>
+          {t('phone')} - <b>+370 37 302375</b>
         </Text>
 
         <Text>
-          {email} - <b>info@toten-transport.lt</b>
+          {t('email')} - <b>info@toten-transport.lt</b>
         </Text>
       </Box>
     </Container>

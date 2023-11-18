@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { IconTruck, IconForklift, IconLicense, IconPackage } from '@tabler/icons-react';
 import { Container, Group, Button, Box, Title, Stack } from '@mantine/core';
+import { useTranslations } from 'next-intl'
 
 import classes from './HeroSection.module.css';
 
@@ -16,6 +17,7 @@ type HeroSectionProps = {
 const HeroSection = ({ text }: HeroSectionProps) => {
   const totenColor = '#E31937';
   const { firstText, btnText, btnLink } = text;
+  const t = useTranslations('Hero')
 
   return (
     <Stack justify="center" gap="xl" className={classes.mainBgPhoto}>

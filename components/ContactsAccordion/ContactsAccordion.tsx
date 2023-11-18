@@ -1,5 +1,6 @@
 import { IconPhoneCall, IconMail, IconUser } from '@tabler/icons-react';
 import { Accordion, Container, Box, Text, Group, Stack } from '@mantine/core';
+import { useTranslations } from 'next-intl'
 
 import classes from './ContactsAccordion.module.css';
 
@@ -67,13 +68,16 @@ type ContactsAccordionProps = {
   text: AccordionItemProps[];
 };
 
-const ContactsAccordion = ({ text }: ContactsAccordionProps) => (
+const ContactsAccordion = ({ text }: ContactsAccordionProps) =>{
+  const t = useTranslations('Contacts')
+
+return (
   <Container size="sm" className={classes.accordionContainer}>
     <Box ta="center">
       <IconPhoneCall size="32" color="green" />
     </Box>
     <Accordion>{text && text.map((item: AccordionItemProps) => AccordionItem(item))}</Accordion>
   </Container>
-);
+);}
 
 export default ContactsAccordion;

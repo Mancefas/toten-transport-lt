@@ -1,32 +1,28 @@
 'use client';
 
-import Link from 'next/link';
+// import { Link } from '@/lib/navigation'
+import Link from 'next-intl/link';
 import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useTranslations } from 'next-intl'
 
 import classes from './Header.module.css';
 
-type HeaderProps = {
-  text: {
-    navLinks: { name: string; linksTo: string }[];
-    languageLinks: { name: string; linksTo: string }[];
-  };
-};
-
-export function Header({ text }: HeaderProps) {
+export function Header() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-  const { navLinks, languageLinks } = text;
+  const t = useTranslations('Header')
+  const keys = ['aboutLink', 'contactsLink']
 
-  const navigationLinks = navLinks.map(({ linksTo, name }) => (
-    <Link href={linksTo} className={classes.link} key={name}>
-      {name}
+  const navigationLinks = keys.map((key) => (
+    <Link href={t(`${key}.linksTo`)} className={classes.link} key={t(`${key}.name`)}>
+      {t(`${key}.name`)}
     </Link>
   ));
-  const langLinks = languageLinks.map(({ linksTo, name }) => (
-    <Button component="a" size="compact-xs" color="red" radius="xl" href={linksTo} key={name}>
-      {name}
-    </Button>
-  ));
+  // const langLinks = languageLinks.map(({ linksTo, name }) => (
+  //   <Button component="a" size="compact-xs" color="red" radius="xl" href={linksTo} key={name}>
+  //     {name}
+  //   </Button>
+  // ));
 
   return (
     <Box py={10}>
@@ -49,7 +45,7 @@ export function Header({ text }: HeaderProps) {
             {navigationLinks}
           </Group>
 
-          <Group visibleFrom="sm">{langLinks}</Group>
+          {/* <Group visibleFrom="sm">{langLinks}</Group> */}
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
@@ -70,9 +66,9 @@ export function Header({ text }: HeaderProps) {
           {navigationLinks}
           <Divider my="sm" />
 
-          <Group justify="center" grow pb="xl" px="md">
+          {/* <Group justify="center" grow pb="xl" px="md">
             {langLinks}
-          </Group>
+          </Group> */}
         </ScrollArea>
       </Drawer>
     </Box>
