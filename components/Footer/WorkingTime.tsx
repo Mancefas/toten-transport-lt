@@ -1,19 +1,18 @@
 import React from 'react';
 import { Container, Group, Stack, Text, Card, Popover, Flex } from '@mantine/core';
 
-type Props = {
-  workingTime: { weekdays: string[]; time: string; working: string };
-};
+import { useTranslations } from 'next-intl'
 
-const WorkingTime = ({ workingTime }: Props) => {
-  const { weekdays, time, working } = workingTime;
+const WorkingTime = () => {
+  const t = useTranslations('WorkingTime')
+  const weekdaysKeys = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
 
   return (
     <Container size="sm">
       <Popover position="bottom">
         <Popover.Target>
           <Text size="md" className="nc-blue" style={{ cursor: 'pointer' }}>
-            {working}
+            {t('working')}
           </Text>
         </Popover.Target>
 
@@ -21,15 +20,16 @@ const WorkingTime = ({ workingTime }: Props) => {
           <Card withBorder radius="sm">
             <Group>
               <Stack>
-                {weekdays.map((day) => (
-                  <Flex gap="sm" justify="center" key={day}>
-                    <Text>{day}</Text> <Text>{time}</Text>
+                {weekdaysKeys.map((day) => (
+                  <Flex gap="sm" justify="center" key={t(`${day}`)}>
+                    <Text>{t(`${day}`)}</Text> <Text>{t('time')}</Text>
                   </Flex>
                 ))}
               </Stack>
             </Group>
           </Card>
         </Popover.Dropdown>
+        
       </Popover>
     </Container>
   );

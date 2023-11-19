@@ -1,34 +1,32 @@
 'use client';
 
 import { Container, Group, Anchor, Text } from '@mantine/core';
+
+import { useTranslations } from 'next-intl'
+
 import classes from './Footer.module.css';
-import WorkingTime from '../WorkingTime/WorkingTime';
+import WorkingTime from './WorkingTime';
 
-type FooterProps = {
-  text: {
-    workingTime: { weekdays: string[]; time: string; working: string };
-    rights: string;
-    links: { link: string; label: string }[];
-  };
-};
-
-export function Footer({ text }: FooterProps) {
-  const { workingTime, rights, links } = text;
-
-  const items = links.map((link) => (
-    <Anchor<'a'> target="_blank" key={link.label} href={link.link}>
-      {link.label}
-    </Anchor>
-  ));
+export default function Footer() {
+  const t = useTranslations('Footer')
+  const linksKeys = ['fbLink', 'goLink']
 
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <Text size="md">
-          ©️ {new Date().getFullYear()} {rights}
+          ©️ {new Date().getFullYear()} {t('rights')}
         </Text>
-        <WorkingTime workingTime={workingTime} />
-        <Group className={classes.links}>{items}</Group>
+
+        <WorkingTime />
+
+        <Group className={classes.links}>
+          {linksKeys.map((key) => (
+          <Anchor<'a'> target="_blank" key={t(`${key}.label`)} href={t(`${key}.link`)}>
+            {t(`${key}.label`)}
+          </Anchor>))}
+        </Group>
+
       </Container>
     </div>
   );

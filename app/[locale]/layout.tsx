@@ -7,13 +7,12 @@ import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '@/theme';
 
 import { NextIntlClientProvider } from 'next-intl'
-import {unstable_setRequestLocale} from 'next-intl/server';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { locales } from '@/lib/navigation';
 
 import { Header } from '@/components/Header/Header';
-import { Footer } from '@/components/Footer/Footer';
+import Footer from '@/components/Footer';
 
-import footerTranslations from '@/dictionaries/footer/en.json';
 import metaDataTranslations from '@/dictionaries/metaData/en.json';
 
 type Props = {
@@ -59,7 +58,7 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header/>
           {children}
-          <Footer text={footerTranslations} />
+          <Footer />
         </NextIntlClientProvider>
         </MantineProvider>
       </body>

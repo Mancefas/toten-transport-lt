@@ -16,16 +16,21 @@
         }
     },
     "Footer": {
-        "workingTime":
-        { "weekdays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "time": "9:00 - 17:00",
-            "working": "Opening hours"},
-            "rights": "All rights reserved",
-        "links": [
+        "fbLink":
             { "link": "https://www.facebook.com/nordcarrier.lt", "label": "Facebook" },
-            { "link": "#", "label": "Google" }
-      ]
+        "goLink":  
+            { "link": "#", "label": "Google" },
+        "rights": "All rights reserved"
     },
+    "WorkingTime":{
+            "Mon":"Monday",
+            "Tue": "Tuesday", 
+            "Wed": "Wednesday",
+            "Thu": "Thursday", 
+            "Fri":"Friday",
+            "time": "9:00 - 17:00",
+            "working": "Opening hours"
+    },            
     "About": {
         "firstText": "Lithuanian-Norwegian logistics services company. Operating in Kaunas since year 2000. Member of Norwegian group Toten Transport AS. The main activity is transportation of small, partial and full loads by road transport to Scandinavian and Baltic countries. We are a member of Lithuanian National Freight Forwarders Association LINEKA. Civil liability is insured under Lithuanian Freight Forwarders General Freight Forwarding Conditions LEBES - Conforms to Nordic Freight Forwarding Conditions NSAB 2015. The company's vehicles are equipped with cargo tracking equipment, we can quickly provide information about the cargo being transported and the location of the machine.",
         "secondText": "Every order and every customer is important to us!",
