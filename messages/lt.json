@@ -128,32 +128,32 @@
         }
       ]
     },
-    "Feature": [
-        {
-          "id": "1",
-          "featureHeading": "Good experience in trucking",
-          "featureText": "Nordcarrier Baltic was established in 2000. Since 2017 we are part of Toten Transport group.",
-          "featureIcon": "certificat"
-        },
-        {
-          "id": "2",
-          "featureHeading": "Regular departures",
-          "featureText": "Departures 1-2 times per week. Departures to north Norway 1 time per week.",
-          "featureIcon": "calendar"
-        },
-        {
-          "id": "3",
-          "featureHeading": "Customs",
-          "featureText": "Customs paperwork services in Lithuania and Norway.",
-          "featureIcon": "file"
-        },
-        {
-          "id": "4",
-          "featureHeading": "Warehouse in Kaunas and Oslo",
-          "featureText": "Terminal services in Kaunas and Norway.",
-          "featureIcon": "warehouse"
-        }
-      ],
+    "Feature": {
+      "1": {
+        "id": "1",
+        "featureHeading": "Didelė patirtis pervežimuose",
+        "featureText": "Pervežimus į Skandinavijos šalis vykdome nuo 2000m. Nuo 2017m. esame Toten Transport grupės padalinys.",
+        "featureIcon": "certificat"
+      },
+      "2": {
+        "id": "2",
+        "featureHeading": "Reguliarūs reisai",
+        "featureText": "Vykstame į Švediją, Norvegiją 2 kartus savaitėje.Reguliarūs reisai iš šiaurės Norvegijos kiekvieną savaitę.",
+        "featureIcon": "calendar"
+      },
+      "3": {
+        "id": "3",
+        "featureHeading": "Muitinės tarpininkavimas",
+        "featureText": "Tvarkome muitinės eksporto, importo ir kitus muitinės formalumus. Tiek Lietuvoje, tiek Norvegijoje.",
+        "featureIcon": "file"
+      },
+      "4": {
+        "id": "4",
+        "featureHeading": "Sandėliavimas, perkrovimai",
+        "featureText": "Sandėlis Kaune (Palemono 171) ir Norvegijoje (Oslo)",
+        "featureIcon": "warehouse"
+      }
+    },    
     "Maps": [
         {
         "title": "Office address",
