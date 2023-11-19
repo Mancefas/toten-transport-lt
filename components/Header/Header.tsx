@@ -26,7 +26,7 @@ export function Header() {
           {/* Company logo */}
           <a href="/">
             <img
-              src="Toten-Transport.svg"
+              src="/Toten-Transport.svg"
               className={classes.logo}
               alt="Toten transport logo"
               height="56px"
