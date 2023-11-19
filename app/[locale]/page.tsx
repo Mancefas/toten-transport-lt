@@ -6,7 +6,6 @@ import HeroSection from '@/components/HeroSection/HeroSection';
 import Features from '@/components/Features/Features';
 
 import featuresTranslations from '@/dictionaries/features/en.json';
-import heroSectionTranslations from '@/dictionaries/hero/en.json';
 
 type SupportedLocale = 'lt' | 'en';
 
@@ -20,7 +19,7 @@ export default function HomePage({
   unstable_setRequestLocale(locale);
   return (
     <>
-      <HeroSection text={heroSectionTranslations} />
+      <HeroSection />
       <Features text={featuresTranslations} />
     </>
   );

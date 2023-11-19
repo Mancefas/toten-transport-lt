@@ -1,22 +1,12 @@
-import Link from 'next/link';
 import { IconTruck, IconForklift, IconLicense, IconPackage } from '@tabler/icons-react';
 import { Container, Group, Button, Box, Title, Stack } from '@mantine/core';
+
 import { useTranslations } from 'next-intl'
 
 import classes from './HeroSection.module.css';
 
-type HeroSectionProps = {
-  text: {
-    firstText: string;
-    secondText: string;
-    btnText: string;
-    btnLink: string;
-  };
-};
-
-const HeroSection = ({ text }: HeroSectionProps) => {
+const HeroSection = () => {
   const totenColor = '#E31937';
-  const { firstText, btnText, btnLink } = text;
   const t = useTranslations('Hero')
 
   return (
@@ -34,21 +24,21 @@ const HeroSection = ({ text }: HeroSectionProps) => {
       {/* Main text */}
       <Container className={classes.zIndex}>
         <Box w="80%" m="auto">
-          <Title className={classes.mainText}>{firstText}</Title>
+          <Title className={classes.mainText}>{t('firstText')}</Title>
         </Box>
 
         {/* Call to action btn */}
         <Box mt="lg" m="auto" ta="center">
-          {text && (
+          {(
               <Button
                 component="a"
-                href={btnLink}
+                href={t('btnLink')}
                 variant="gradient"
                 gradient={{ from: '#cc9494', to: `${totenColor}`, deg: 60 }}
                 radius="md"
                 size="lg"
               >
-                {btnText}
+                {t('btnText')}
               </Button>
           )}
         </Box>
