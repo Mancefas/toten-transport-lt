@@ -167,6 +167,6 @@
         "description": "Partial and full freight transportation between Lithuania and Scandinavia countrys (Norway, Sweden and Finland). Toten Transport Lithuania is part of Toten transport AS."
     },
     "LocaleSwitcher": {
-        "locale": "{locale, select, fr {French} en {English} other {Unknown}}"
+        "locale": "{locale, select, lt {Lithuanian} en {English} other {Unknown}}"
     }
 }

@@ -1,11 +1,11 @@
 'use client';
 
-// import { Link } from '@/lib/navigation'
-import Link from 'next-intl/link';
 import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/navigation'
 
+import LocaleSwitch from '@/components/LocaleSwitch';
 import classes from './Header.module.css';
 
 export function Header() {
@@ -18,11 +18,6 @@ export function Header() {
       {t(`${key}.name`)}
     </Link>
   ));
-  // const langLinks = languageLinks.map(({ linksTo, name }) => (
-  //   <Button component="a" size="compact-xs" color="red" radius="xl" href={linksTo} key={name}>
-  //     {name}
-  //   </Button>
-  // ));
 
   return (
     <Box py={10}>
@@ -40,13 +35,15 @@ export function Header() {
           </a>
 
           {/* Navigation items */}
-
           <Group h="100%" gap={0} visibleFrom="sm">
             {navigationLinks}
           </Group>
 
-          {/* <Group visibleFrom="sm">{langLinks}</Group> */}
-
+          {/* Language switch */}
+          <Group visibleFrom="sm">
+            <LocaleSwitch />
+          </Group>
+            
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
       </header>
@@ -66,9 +63,9 @@ export function Header() {
           {navigationLinks}
           <Divider my="sm" />
 
-          {/* <Group justify="center" grow pb="xl" px="md">
-            {langLinks}
-          </Group> */}
+           {/* Language switch */}
+           <LocaleSwitch />
+
         </ScrollArea>
       </Drawer>
     </Box>

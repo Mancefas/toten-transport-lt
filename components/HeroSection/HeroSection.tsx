@@ -40,9 +40,9 @@ const HeroSection = ({ text }: HeroSectionProps) => {
         {/* Call to action btn */}
         <Box mt="lg" m="auto" ta="center">
           {text && (
-            <Link href={btnLink} passHref>
               <Button
                 component="a"
+                href={btnLink}
                 variant="gradient"
                 gradient={{ from: '#cc9494', to: `${totenColor}`, deg: 60 }}
                 radius="md"
@@ -50,7 +50,6 @@ const HeroSection = ({ text }: HeroSectionProps) => {
               >
                 {btnText}
               </Button>
-            </Link>
           )}
         </Box>
       </Container>
