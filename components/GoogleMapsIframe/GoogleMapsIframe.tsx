@@ -1,38 +1,35 @@
 import { SimpleGrid, Container, Center, Text } from '@mantine/core';
 
+import { useTranslations } from 'next-intl'
+
 import classes from './GoogleMapsIframe.module.css';
 
-// single item
-type SingeItemProps = {
-  title: string;
-  mapPlace: string;
-  iframeTitle: string;
-};
-const SingleItem = (data: SingeItemProps) => (
-  <Center style={{ flexDirection: 'column' }} key={data.title}>
-    <Text size="lg" fw="500">
-      {data.title}
-    </Text>
-    <iframe
-      src={data.mapPlace}
-      className={classes.gIframe}
-      title={data.iframeTitle}
-      aria-hidden="false"
-      loading="lazy"
-    />
-  </Center>
-);
+type GoogleMapsIframeProps = {};
 
-type PropsType = {
-  text: SingeItemProps[];
-};
+const GoogleMapsIframe: React.FC<GoogleMapsIframeProps> = (props) => { 
+  const t = useTranslations('Maps');
 
-const GoogleMapsIframe = ({ text }: PropsType) => (
-  <Container size="sm" pb="lg">
-    <SimpleGrid spacing="lg" cols={{ base: 1, sm: 2 }}>
-      {text && text.map((place) => SingleItem(place))}
-    </SimpleGrid>
-  </Container>
-);
+  const translationsKeys = ['Office', 'Warehouse'];
+
+  return(
+    <Container size="sm" pb="lg">
+      <SimpleGrid spacing="lg" cols={{ base: 1, sm: 2 }}>
+        {translationsKeys.map((place) => (
+          <Center style={{ flexDirection: 'column' }} key={t(`${place}.title`)}>
+            <Text size="lg" fw="500">
+              {t(`${place}.title`)}
+            </Text>
+            <iframe
+              src={t(`${place}.mapPlace`)}
+              className={classes.gIframe}
+              title={t(`${place}.iframeTitle`)}
+              aria-hidden="false"
+              loading="lazy"
+            />
+        </Center>
+        ))}
+      </SimpleGrid>
+    </Container>
+  )};
 
 export default GoogleMapsIframe;
