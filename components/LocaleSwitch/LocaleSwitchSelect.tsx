@@ -2,6 +2,7 @@
 
 import {ChangeEvent, ReactNode, useTransition} from 'react';
 import {useRouter, usePathname} from '@/lib/navigation';
+import classes from './LocalSwitch.module.css';
 
 type Props = {
   children: ReactNode;
@@ -24,14 +25,15 @@ export default function LocaleSwitchSelect({
   }
 
   return (
-    <label>
+
       <select
+        className={classes.wrapper}
         defaultValue={defaultValue}
         disabled={isPending}
         onChange={onSelectChange}
       >
         {children}
       </select>
-    </label>
+
   );
 }
