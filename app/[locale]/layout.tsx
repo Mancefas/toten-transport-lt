@@ -1,9 +1,8 @@
 import { ReactNode } from 'react';
-import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import '@mantine/core/styles.css';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
 import { theme } from '@/theme';
 
 import { NextIntlClientProvider } from 'next-intl'
@@ -12,15 +11,13 @@ import { locales } from '@/lib/navigation';
 
 import { Header } from '@/components/Header/Header';
 import Footer from '@/components/Footer';
+import { MetaDataCustom } from '@/components/MetaDataCustom/MetaDataCustom';
 
-import metaDataTranslations from '@/dictionaries/metaData/en.json';
 
 type Props = {
   children: ReactNode
   params: { locale: string }
 }
-
-export const metadata: Metadata = metaDataTranslations;
 
 //function to get the translations
 async function getMessages(locale: string) {
@@ -44,24 +41,17 @@ export default async function RootLayout({
   const messages = await getMessages(locale)
 
   return (
-    <html lang={locale}>
-      <head>
-        <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
-        />
-      </head>
-      <body>
-        <MantineProvider theme={theme}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header/>
-          {children}
-          <Footer />
+        <html lang={locale}>
+         <MetaDataCustom />
+          <body>
+            <MantineProvider theme={theme}>
+              <Header/>
+              {children}
+              <Footer />
+            </MantineProvider>
+          </body>
+        </html>
         </NextIntlClientProvider>
-        </MantineProvider>
-      </body>
-    </html>
   );
 }
