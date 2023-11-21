@@ -44,7 +44,7 @@
     "Contacts": {
       "INo": {
         "id": "INo",
-        "name": "Regular partial and full freight transportation from Lithuania to Sweden, Norway.",
+        "name": "Regular partial and full freight transportation from Lithuania to Sweden, Norway",
         "person": "Jolita",
         "mobHref": "+37069930371",
         "mob": "+370 699 30371",
@@ -53,7 +53,7 @@
       },
       "IsNo": {
         "id": "IsNo",
-        "name": "Regular partial and full freight transportation from Sweden, Norway to Lithuania.",
+        "name": "Regular partial and full freight transportation from Sweden, Norway to Lithuania",
         "person": "Violeta",
         "mobHref": "+370608569900",
         "mob": "+370 685 69900",
@@ -62,7 +62,7 @@
       },
       "Muit": {
         "id": "Muit",
-        "name": "Customs paperwork services in Lithuania.",
+        "name": "Customs paperwork services in Lithuania",
         "person": "Deimantas",
         "mobHref": "+37060848811",
         "mob": "+370 608 48811",
@@ -71,7 +71,7 @@
       },
       "Kiti": {
         "id": "Kiti",
-        "name": "Other directions. Oversized load, special loads.",
+        "name": "Other directions. Oversized load, special loads",
         "person": "Kęstutis",
         "mobHref": "+37069838550",
         "mob": "+370 698 38550",
@@ -80,7 +80,7 @@
       },
       "Fin": {
         "id": "Fin",
-        "name": "Regular partial and full freight transportation to Finland, ferry tickets.",
+        "name": "Regular partial and full freight transportation to Finland, ferry tickets",
         "person": "Jurgita",
         "mobHref": "+37069962074",
         "mob": "+370 699 62074",
@@ -89,7 +89,7 @@
       },
       "Buh": {
         "id": "Buh",
-        "name": "Bookkeeping, finance, invoices.",
+        "name": "Bookkeeping, finance, invoices",
         "person": "Sonata",
         "mobHref": "+37069983248",
         "mob": "+370 699 83248",
@@ -100,7 +100,7 @@
       },
       "Rel": {
         "id": "Rel",
-        "name": "Relations with haulers, marketing, special projects.",
+        "name": "Relations with haulers, marketing, special projects",
         "person": "Audrius",
         "mobHref": "+37069944422",
         "mob": "+370 699 44422",
@@ -109,7 +109,7 @@
       },
       "Sand": {
         "id": "Sand",
-        "name": "Warehouse.",
+        "name": "Warehouse",
         "person": "Gintaras",
         "mobHref": "+37069990014",
         "mob": "+370 699 90014",
@@ -118,12 +118,21 @@
       },
       "Vad": {
         "id": "Vad",
-        "name": "Managing Director.",
+        "name": "Managing Director",
         "person": "Eglė",
         "mobHref": "+37061873017",
         "mob": "+370 618 73017",
         "mailHref": "egle@toten-transport.lt",
         "mail": "egle@toten-transport.lt"
+      },
+      "Inv": {
+        "id": "Inv",
+        "name": "Invoices",
+        "person": "",
+        "mobHref": "",
+        "mob": "",
+        "mailHref": "invoice@toten-transport.lt",
+        "mail": "invoice@toten-transport.lt"
       }
     },          
     "Feature": {

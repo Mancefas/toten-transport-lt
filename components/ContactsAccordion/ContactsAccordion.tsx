@@ -1,4 +1,6 @@
-import { IconPhoneCall, IconMail, IconUser } from '@tabler/icons-react';
+'use client'
+
+import { IconPhoneCall, IconMail, IconUser, IconLicense } from '@tabler/icons-react';
 import { Accordion, Container, Box, Text, Group, Stack } from '@mantine/core';
 import { useTranslations } from 'next-intl'
 
@@ -9,7 +11,7 @@ const totenColor = '#E31937';
 const ContactsAccordion = () => {
   const translationKey = 'Contacts'
   const t = useTranslations(translationKey)
-  const contactsKeys = ["INo", "IsNo", "Muit", "Kiti", "Fin", "Buh", "Rel", "Sand", "Vad"];
+  const contactsKeys = ["Vad", "INo", "IsNo", "Muit", "Kiti", "Fin", "Buh", "Rel", "Sand", "Inv"];
 
 return (
   <Container size="sm" className={classes.accordionContainer}>
@@ -17,44 +19,44 @@ return (
       <IconPhoneCall size="32" color="green" />
     </Box>
     <Accordion>
-      {contactsKeys.map((contact) => {
-        // if no translation next-intl returns a ${namespace}.${key} string. 
-        const hasOptionalMail = t(`${contact}.mail2`) !== `${translationKey}.${contact}.mail2`;
-
-      return (
+      {contactsKeys.map((contact) => (
             <Accordion.Item value={t(`${contact}.id`)} key={t(`${contact}.id`)}>
               <Accordion.Control>{t(`${contact}.name`)}</Accordion.Control>
               <Accordion.Panel>
                 <Box ta="center">
                   <Stack justify="center" gap="xs">
+
+                     {/* user name */}
                     <Group justify="center">
+                    {t(`${contact}.person`) ? 
+                      <>
                       <IconUser size="24" color={totenColor} />
                       <Text tt="uppercase" fw={500}>
                         {t(`${contact}.person`)}
                       </Text>
+                      </>
+                      :
+                      <IconLicense size="24" color={totenColor} />
+                      }
                     </Group>
-          
-                    <Group justify="center" gap="xs">
+                    
+                    {/* phone number */}  
+                    {t(`${contact}.mobHref`) && <Group justify="center" gap="xs">
                       <IconPhoneCall size="16" color={totenColor} />
                       <a href={`tel:${t(`${contact}.mobHref`)}`}>{`Mob.${t(`${contact}.mobHref`)}`}</a>
                       <br />
-                    </Group>
+                    </Group>}
           
-                    <Group justify="center" gap="xs">
+                    {/* email */}
+                    {t(`${contact}.mailHref`) && <Group justify="center" gap="xs">
                       <IconMail size="16" color={totenColor} />
                       <a href={`mailto:${t(`${contact}.mailHref`)}`}>{t(`${contact}.mail`)}</a>
-                    </Group>
-          
-                    {hasOptionalMail && (
-                      <Group justify="center" gap="xs">
-                        <IconMail size="16" color={totenColor} />
-                        <a href={`mailto:${t(`${contact}.mailHref2`)}`}>{t(`${contact}.mail2`)}</a>
-                      </Group>
-                    )}
+                    </Group>}
+                    
                   </Stack>
                 </Box>
               </Accordion.Panel>
-            </Accordion.Item>)}
+            </Accordion.Item>)
       )}
     </Accordion>
   </Container>
