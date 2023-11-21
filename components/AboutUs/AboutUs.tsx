@@ -1,68 +1,50 @@
+'use client';
+
 import { Container, Title, Text, Box } from '@mantine/core';
+import { useTranslations } from 'next-intl';
 
-import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './AboutUs.module.css';
-import ltTranslation from '@/dictionaries/about/lt.json';
-import enTranslation from '@/dictionaries/about/en.json';
 
-// text paragraph item
-type propType = {
-  firstText: string;
-  secondText: string;
-  totenText: string;
-  code: string;
-  vat: string;
-  address: string;
-  phone: string;
-  email: string;
-};
+type AboutUsProps = {};
 
-const paragraphItem = (text: propType) => (
-  <>
-    <Box>
-      <Text>{text.firstText}</Text>
-      <Text>{text.totenText}</Text>
-      <Text fw={500} py="lg">
-        {text.secondText}
-      </Text>
-    </Box>
-
-    <Box mt="lg">
-      <Text>
-        {text.code} - <b>110842421</b>
-      </Text>
-
-      <Text>
-        {text.vat} - <b>LT108424219</b>
-      </Text>
-
-      <Text>
-        {text.address} - <b>A.Juozapavičiaus pr 3B, Kaunas</b>
-      </Text>
-
-      <Text>
-        {text.phone} - <b>+370 37 302375</b>
-      </Text>
-
-      <Text>
-        {text.email} - <b>info@toten-transport.lt</b>
-      </Text>
-    </Box>
-  </>
-);
-
-const AboutUs = () => {
-  const { selectedLanguage } = useLanguageContext();
+export const AboutUs: React.FC<AboutUsProps> = () => {
+  const t = useTranslations('About');
 
   return (
     <Container size="md" className={classes.container}>
       <Title order={1} ta="center" className="toten-red" mb="lg">
         Toten Transport Lithuania, UAB
       </Title>
+      {/* Paragraphs item */}
+      <Box>
+        <Text>{t('firstText')}</Text>
+        <Text>{t('totenText')}</Text>
+        <Text fw={500} py="lg">
+          {t('secondText')}
+        </Text>
+      </Box>
 
-      {selectedLanguage === 'ltu' ? paragraphItem(ltTranslation) : paragraphItem(enTranslation)}
+      <Box mt="lg">
+        <Text>
+          {t('code')} - <b>110842421</b>
+        </Text>
+
+        <Text>
+          {t('vat')} - <b>LT108424219</b>
+        </Text>
+
+        <Text>
+          {t('address')} - <b>A.Juozapavičiaus pr 3B, Kaunas</b>
+        </Text>
+
+        <Text>
+          {t('phone')} - <b>+370 37 302375</b>
+        </Text>
+
+        <Text>
+          {t('email')} - <b>info@toten-transport.lt</b>
+        </Text>
+      </Box>
     </Container>
   );
 };
-
-export default AboutUs;

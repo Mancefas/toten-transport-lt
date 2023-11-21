@@ -1,39 +1,35 @@
+'use client';
+
 import { Container, Group, Anchor, Text } from '@mantine/core';
+
+import { useTranslations } from 'next-intl';
+
+import { WorkingTime } from './WorkingTime';
 import classes from './Footer.module.css';
-import { useLanguageContext } from '@/context/LanguageContext';
-import WorkingTime from '../WorkingTime/WorkingTime';
 
-const links = [
-  { link: 'https://www.facebook.com/nordcarrier.lt', label: 'Facebook' },
-  { link: '#', label: 'Google' },
-  { link: 'https://rekvizitai.vz.lt/imone/nordcarrier_baltic/', label: 'Rekvizitai' },
-];
+type FooterProps = {};
 
-export function Footer() {
-  const { selectedLanguage } = useLanguageContext();
-
-  const items = links.map((link) => (
-    <Anchor<'a'>
-      c="dimmed"
-      key={link.label}
-      href={link.link}
-      onClick={(event) => event.preventDefault()}
-      size="sm"
-    >
-      {link.label}
-    </Anchor>
-  ));
+export const Footer: React.FC<FooterProps> = () => {
+  const t = useTranslations('Footer');
+  const linksKeys = ['fbLink', 'goLink'];
 
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <Text size="md">
-          ©️ {new Date().getFullYear()}{' '}
-          {selectedLanguage === 'ltu' ? 'Visos teisės saugomos' : 'All rights reserved'}{' '}
+          ©️ {new Date().getFullYear()} {t('rights')}
         </Text>
+
         <WorkingTime />
-        <Group className={classes.links}>{items}</Group>
+
+        <Group className={classes.links}>
+          {linksKeys.map((key) => (
+            <Anchor<'a'> target="_blank" key={t(`${key}.label`)} href={t(`${key}.link`)}>
+              {t(`${key}.label`)}
+            </Anchor>
+          ))}
+        </Group>
       </Container>
     </div>
   );
-}
+};

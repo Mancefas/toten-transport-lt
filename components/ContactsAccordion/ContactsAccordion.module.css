@@ -1,6 +1,6 @@
 .accordionContainer {
     height: fit-content;
-    min-height: 90vh;
+    padding: 5rem 3rem;
     display: flex;
     justify-content: center;
     flex-direction: column;

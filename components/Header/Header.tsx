@@ -2,16 +2,24 @@
 
 import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/lib/navigation';
 
+import { LocaleSwitch } from '@/components/LocaleSwitch';
 import classes from './Header.module.css';
-import { useLanguageContext } from '@/context/LanguageContext';
-import LanguageSelectBtn from '../LanguageSelectBtn/LanguageSelectBtn';
-import ltTranslation from '../../dictionaries/header/lt.json';
-import enTranslation from '../../dictionaries/header/en.json';
 
-export function Header() {
+type HeaderProps = {};
+
+export const Header: React.FC<HeaderProps> = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-  const { selectedLanguage } = useLanguageContext();
+  const t = useTranslations('Header');
+  const keys = ['aboutLink', 'contactsLink'];
+
+  const navigationLinks = keys.map((key) => (
+    <Link href={t(`${key}.linksTo`)} className={classes.link} key={t(`${key}.name`)}>
+      {t(`${key}.name`)}
+    </Link>
+  ));
 
   return (
     <Box py={10}>
@@ -20,7 +28,7 @@ export function Header() {
           {/* Company logo */}
           <a href="/">
             <img
-              src="Toten-Transport.svg"
+              src="/Toten-Transport.svg"
               className={classes.logo}
               alt="Toten transport logo"
               height="56px"
@@ -29,19 +37,13 @@ export function Header() {
           </a>
 
           {/* Navigation items */}
-
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="/" className={classes.link}>
-              {selectedLanguage === 'ltu' ? ltTranslation.about : enTranslation.about}
-            </a>
-
-            <a href="#" className={classes.link}>
-              {selectedLanguage === 'ltu' ? ltTranslation.contacts : enTranslation.contacts}
-            </a>
+            {navigationLinks}
           </Group>
 
+          {/* Language switch */}
           <Group visibleFrom="sm">
-            <LanguageSelectBtn />
+            <LocaleSwitch />
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -60,22 +62,13 @@ export function Header() {
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
-
-          <a href="/" className={classes.link}>
-            {selectedLanguage === 'ltu' ? ltTranslation.about : enTranslation.about}
-          </a>
-
-          <a href="#" className={classes.link}>
-            {selectedLanguage === 'ltu' ? ltTranslation.contacts : enTranslation.contacts}
-          </a>
-
+          {navigationLinks}
           <Divider my="sm" />
 
-          <Group justify="center" grow pb="xl" px="md">
-            <LanguageSelectBtn />
-          </Group>
+          {/* Language switch */}
+          <LocaleSwitch />
         </ScrollArea>
       </Drawer>
     </Box>
   );
-}
+};

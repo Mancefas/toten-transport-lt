@@ -1,3 +1,5 @@
+'use client';
+
 import {
   IconCalendarTime,
   IconFileInfo,
@@ -5,11 +7,9 @@ import {
   IconBuildingWarehouse,
 } from '@tabler/icons-react';
 import { Card, Text, Box, SimpleGrid } from '@mantine/core';
+import { useTranslations } from 'next-intl';
 
-import { useLanguageContext } from '@/context/LanguageContext';
 import classes from './Features.module.css';
-import ltTranslation from '../../dictionaries/features/lt.json';
-import enTranslation from '../../dictionaries/features/en.json';
 
 // to map icon for feature
 type FeatureIcon = 'certificat' | 'calendar' | 'file' | 'warehouse';
@@ -20,45 +20,35 @@ const iconComponents: Record<FeatureIcon, JSX.Element> = {
   warehouse: <IconBuildingWarehouse size={40} />,
 };
 
-// Feature item
-type featureProps = {
-  id: string;
-  featureHeading: string;
-  featureText: string;
-  featureIcon: string;
-};
-const singleFeature = (feature: featureProps) => (
-  <Box py="lg" key={feature.id}>
-    <Card shadow="sm" p="lg" radius="md" withBorder h="100%">
-      <Card.Section ta="center" className={classes.iconColor}>
-        {iconComponents[feature.featureIcon as FeatureIcon]}
-      </Card.Section>
+type FeaturesProps = {};
 
-      <Text fw={500} size="lg" ta="center">
-        {feature.featureHeading}
-      </Text>
-
-      <Text size="sm" c="dimmed" ta="center">
-        {feature.featureText}
-      </Text>
-    </Card>
-  </Box>
-);
-
-const Features = () => {
-  const { selectedLanguage } = useLanguageContext();
+export const Features: React.FC<FeaturesProps> = () => {
+  const t = useTranslations('Feature');
+  const featuresKeys = ['1', '2', '3', '4'];
 
   return (
     <div className={classes.boxForGrid}>
       <Box px="lg">
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }}>
-          {selectedLanguage === 'ltu'
-            ? ltTranslation.map((feature) => singleFeature(feature))
-            : enTranslation.map((feature) => singleFeature(feature))}
+          {featuresKeys.map((key) => (
+            <Box py="lg" key={t(`${key}.id`)}>
+              <Card shadow="sm" p="lg" radius="md" withBorder h="100%">
+                <Card.Section ta="center" className={classes.iconColor}>
+                  {iconComponents[t(`${key}.featureIcon`) as FeatureIcon]}
+                </Card.Section>
+
+                <Text fw={500} size="lg" ta="center">
+                  {t(`${key}.featureHeading`)}
+                </Text>
+
+                <Text size="sm" c="dimmed" ta="center">
+                  {t(`${key}.featureText`)}
+                </Text>
+              </Card>
+            </Box>
+          ))}
         </SimpleGrid>
       </Box>
     </div>
   );
 };
-
-export default Features;

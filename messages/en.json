@@ -1,0 +1,183 @@
+{
+    "Hero": {
+        "firstText": "Partial and full freight transportation between Lithuania and Sweden, Norway and Finland",
+        "secondText": "We also provide warehousing, terminal, and customs brokerage services",
+        "btnText": "Contact us",
+        "btnLink": "en/contacts"
+    },
+    "Header": {
+        "aboutLink": {
+            "name": "About us", 
+            "linksTo": "/about"            
+        },
+        "contactsLink": {
+          "name": "Contacts", 
+          "linksTo": "/contacts"
+        }
+    },
+    "Footer": {
+        "fbLink":
+            { "link": "https://www.facebook.com/nordcarrier.lt", "label": "Facebook" },
+        "goLink":  
+            { "link": "#", "label": "Google" },
+        "rights": "All rights reserved"
+    },
+    "WorkingTime":{
+            "Mon":"Monday",
+            "Tue": "Tuesday", 
+            "Wed": "Wednesday",
+            "Thu": "Thursday", 
+            "Fri":"Friday",
+            "time": "9:00 - 17:00",
+            "working": "Opening hours"
+    },            
+    "About": {
+        "firstText": "Lithuanian-Norwegian logistics services company. Operating in Kaunas since year 2000. Member of Norwegian group Toten Transport AS. The main activity is transportation of small, partial and full loads by road transport to Scandinavian and Baltic countries. We are a member of Lithuanian National Freight Forwarders Association LINEKA. Civil liability is insured under Lithuanian Freight Forwarders General Freight Forwarding Conditions LEBES - Conforms to Nordic Freight Forwarding Conditions NSAB 2015. The company's vehicles are equipped with cargo tracking equipment, we can quickly provide information about the cargo being transported and the location of the machine.",
+        "secondText": "Every order and every customer is important to us!",
+        "totenText": "From 2017 we are part of Norwegian logistics group TOTEN TRANSPORT AS. The group has been operating in the market for more than 40 years, is well known and appreciated in Scandinavia, and is also expanding.",
+        "code":"Company code",
+        "vat": "VAT code",
+        "address": "Office address",
+        "phone":"Contact phone",
+        "email":"E-mail"
+    },
+    "Contacts": {
+      "INo": {
+        "id": "INo",
+        "name": "Regular partial and full freight transportation from Lithuania to Sweden, Norway",
+        "person": "Jolita",
+        "mobHref": "+37069930371",
+        "mob": "+370 699 30371",
+        "mailHref": "scand@toten-transport.lt",
+        "mail": "scand@toten-transport.lt"
+      },
+      "IsNo": {
+        "id": "IsNo",
+        "name": "Regular partial and full freight transportation from Sweden, Norway to Lithuania",
+        "person": "Violeta",
+        "mobHref": "+370608569900",
+        "mob": "+370 685 69900",
+        "mailHref": "scand@toten-transport.lt",
+        "mail": "scand@toten-transport.lt"
+      },
+      "Muit": {
+        "id": "Muit",
+        "name": "Customs paperwork services in Lithuania",
+        "person": "Deimantas",
+        "mobHref": "+37060848811",
+        "mob": "+370 608 48811",
+        "mailHref": "cust@toten-transport.lt",
+        "mail": "cust@toten-transport.lt"
+      },
+      "Kiti": {
+        "id": "Kiti",
+        "name": "Other directions. Oversized load, special loads",
+        "person": "Kęstutis",
+        "mobHref": "+37069838550",
+        "mob": "+370 698 38550",
+        "mailHref": "k.baltakis@toten-transport.lt",
+        "mail": "k.baltakis@toten-transport.lt"
+      },
+      "Fin": {
+        "id": "Fin",
+        "name": "Regular partial and full freight transportation to Finland, ferry tickets",
+        "person": "Jurgita",
+        "mobHref": "+37069962074",
+        "mob": "+370 699 62074",
+        "mailHref": "fin@toten-transport.lt",
+        "mail": "fin@toten-transport.lt"
+      },
+      "Buh": {
+        "id": "Buh",
+        "name": "Bookkeeping, finance, invoices",
+        "person": "Sonata",
+        "mobHref": "+37069983248",
+        "mob": "+370 699 83248",
+        "mailHref": "sonata@toten-transport.lt",
+        "mail": "sonata@toten-transport.lt",
+        "mailHref2": "sinvoice@toten-transport.lt",
+        "mail2": "invoice@toten-transport.lt"
+      },
+      "Rel": {
+        "id": "Rel",
+        "name": "Relations with haulers, marketing, special projects",
+        "person": "Audrius",
+        "mobHref": "+37069944422",
+        "mob": "+370 699 44422",
+        "mailHref": "audrius@toten-transport.lt",
+        "mail": "audrius@toten-transport.lt"
+      },
+      "Sand": {
+        "id": "Sand",
+        "name": "Warehouse",
+        "person": "Gintaras",
+        "mobHref": "+37069990014",
+        "mob": "+370 699 90014",
+        "mailHref": "sandelis@toten-transport.lt",
+        "mail": "sandelis@toten-transport.lt"
+      },
+      "Vad": {
+        "id": "Vad",
+        "name": "Managing Director",
+        "person": "Eglė",
+        "mobHref": "+37061873017",
+        "mob": "+370 618 73017",
+        "mailHref": "egle@toten-transport.lt",
+        "mail": "egle@toten-transport.lt"
+      },
+      "Inv": {
+        "id": "Inv",
+        "name": "Invoices",
+        "person": "",
+        "mobHref": "",
+        "mob": "",
+        "mailHref": "invoice@toten-transport.lt",
+        "mail": "invoice@toten-transport.lt"
+      }
+    },          
+    "Feature": {
+      "1": {
+        "id": "1",
+        "featureHeading": "Good experience in trucking",
+        "featureText": "Nordcarrier Baltic was established in 2000. Since 2017 we are part of Toten Transport group.",
+        "featureIcon": "certificat"
+      },
+      "2": {
+        "id": "2",
+        "featureHeading": "Regular departures",
+        "featureText": "Departures 1-2 times per week. Departures to north Norway 1 time per week.",
+        "featureIcon": "calendar"
+      },
+      "3": {
+        "id": "3",
+        "featureHeading": "Customs",
+        "featureText": "Customs paperwork services in Lithuania and Norway.",
+        "featureIcon": "file"
+      },
+      "4": {
+        "id": "4",
+        "featureHeading": "Warehouse in Lithuania and Norway",
+        "featureText": "Terminal services in Kaunas and Oslo.",
+        "featureIcon": "warehouse"
+      }
+    },
+    "Maps": {
+       "Office" : {
+        "title": "Office address",
+        "mapPlace": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2296.353475035389!2d23.94600481577211!3d54.861604080324454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7220e526e5937%3A0xc073b77d54d88e8!2sNordcarrier%20Baltic!5e0!3m2!1slt!2slt!4v1663436199566!5m2!1slt!2slt",
+        "iframeTitle": "Nordcarrier Baltic office address"
+        },
+       "Warehouse" : {
+        "title": "Warehouse address",
+        "mapPlace": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2292.804175290485!2d24.064754515774652!3d54.92390838033981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7177a6bf24acb%3A0x34339fb09aefa1df!2sNordcarrier%20Baltic%2C%20sand%C4%97lis!5e0!3m2!1slt!2slt!4v1663436314093!5m2!1slt!2slt",
+        "iframeTitle": "Nordcarrier Baltic warehouse address"
+        }
+      },
+    "MetaData": {
+        "title": "Toten Transport Lithuania - Logistics company for you.",
+        "description": "Partial and full freight transportation between Lithuania and Scandinavia countrys (Norway, Sweden and Finland). Toten Transport Lithuania is part of Toten transport AS."
+    },
+    "LocaleSwitcher": {
+        "locale": "{locale, select, lt {LTU} en {ENG} other {Unknown}}"
+    }
+}

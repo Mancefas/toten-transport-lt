@@ -1,40 +1,35 @@
+'use client';
+
 import { SimpleGrid, Container, Center, Text } from '@mantine/core';
 
-import { useLanguageContext } from '@/context/LanguageContext';
+import { useTranslations } from 'next-intl';
+
 import classes from './GoogleMapsIframe.module.css';
-import ltTranslation from '@/dictionaries/maps/lt.json';
-import enTranslation from '@/dictionaries/maps/en.json';
 
-// single item
-type singeItemProps = {
-  title: string;
-  mapPlace: string;
-  iframeTitle: string;
-};
-const SingleItem = (data: singeItemProps) => (
-  <Center style={{ flexDirection: 'column' }} key={data.title}>
-    <Text size="lg" fw="500">
-      {data.title}
-    </Text>
-    <iframe
-      src={data.mapPlace}
-      className={classes.gIframe}
-      title={data.iframeTitle}
-      aria-hidden="false"
-      loading="lazy"
-    />
-  </Center>
-);
+type GoogleMapsIframeProps = {};
 
-const GoogleMapsIframe = () => {
-  const { selectedLanguage } = useLanguageContext();
+const GoogleMapsIframe: React.FC<GoogleMapsIframeProps> = () => {
+  const t = useTranslations('Maps');
+
+  const translationsKeys = ['Office', 'Warehouse'];
 
   return (
     <Container size="sm" pb="lg">
       <SimpleGrid spacing="lg" cols={{ base: 1, sm: 2 }}>
-        {selectedLanguage === 'ltu'
-          ? ltTranslation.map((place) => SingleItem(place))
-          : enTranslation.map((place) => SingleItem(place))}
+        {translationsKeys.map((place) => (
+          <Center style={{ flexDirection: 'column' }} key={t(`${place}.title`)}>
+            <Text size="lg" fw="500">
+              {t(`${place}.title`)}
+            </Text>
+            <iframe
+              src={t(`${place}.mapPlace`)}
+              className={classes.gIframe}
+              title={t(`${place}.iframeTitle`)}
+              aria-hidden="false"
+              loading="lazy"
+            />
+          </Center>
+        ))}
       </SimpleGrid>
     </Container>
   );

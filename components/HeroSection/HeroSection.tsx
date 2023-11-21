@@ -1,15 +1,15 @@
-import Link from 'next/link';
 import { IconTruck, IconForklift, IconLicense, IconPackage } from '@tabler/icons-react';
 import { Container, Group, Button, Box, Title, Stack } from '@mantine/core';
 
-import { useLanguageContext } from '@/context/LanguageContext';
-import classes from './HeroSection.module.css';
-import ltText from '@/dictionaries/hero/lt.json';
-import enText from '@/dictionaries/hero/en.json';
+import { useTranslations } from 'next-intl';
 
-const HeroSection = () => {
-  const { selectedLanguage } = useLanguageContext();
+import classes from './HeroSection.module.css';
+
+type HeroSectionProps = {};
+
+export const HeroSection: React.FC<HeroSectionProps> = () => {
   const totenColor = '#E31937';
+  const t = useTranslations('Hero');
 
   return (
     <Stack justify="center" gap="xl" className={classes.mainBgPhoto}>
@@ -26,28 +26,23 @@ const HeroSection = () => {
       {/* Main text */}
       <Container className={classes.zIndex}>
         <Box w="80%" m="auto">
-          <Title className={classes.mainText}>
-            {selectedLanguage === 'ltu' ? ltText.firstText : enText.firstText}
-          </Title>
+          <Title className={classes.mainText}>{t('firstText')}</Title>
         </Box>
 
         {/* Call to action btn */}
         <Box mt="lg" m="auto" ta="center">
-          <Link href="/kontaktai" passHref>
-            <Button
-              component="a"
-              variant="gradient"
-              gradient={{ from: '#cc9494', to: `${totenColor}`, deg: 60 }}
-              radius="md"
-              size="lg"
-            >
-              {selectedLanguage === 'ltu' ? ltText.btnText : enText.btnText}
-            </Button>
-          </Link>
+          <Button
+            component="a"
+            href={t('btnLink')}
+            variant="gradient"
+            gradient={{ from: '#cc9494', to: `${totenColor}`, deg: 60 }}
+            radius="md"
+            size="lg"
+          >
+            {t('btnText')}
+          </Button>
         </Box>
       </Container>
     </Stack>
   );
 };
-
-export default HeroSection;
