@@ -1,11 +1,14 @@
-'use client'
+'use client';
 
 import { Container, Title, Text, Box } from '@mantine/core';
-import classes from './AboutUs.module.css';
-import { useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl';
 
-const AboutUs = () => {
-  const t = useTranslations('About')
+import classes from './AboutUs.module.css';
+
+type AboutUsProps = {};
+
+export const AboutUs: React.FC<AboutUsProps> = () => {
+  const t = useTranslations('About');
 
   return (
     <Container size="md" className={classes.container}>
@@ -45,5 +48,3 @@ const AboutUs = () => {
     </Container>
   );
 };
-
-export default AboutUs;

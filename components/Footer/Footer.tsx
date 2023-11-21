@@ -2,14 +2,16 @@
 
 import { Container, Group, Anchor, Text } from '@mantine/core';
 
-import { useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl';
 
+import { WorkingTime } from './WorkingTime';
 import classes from './Footer.module.css';
-import WorkingTime from './WorkingTime';
 
-export default function Footer() {
-  const t = useTranslations('Footer')
-  const linksKeys = ['fbLink', 'goLink']
+type FooterProps = {};
+
+export const Footer: React.FC<FooterProps> = () => {
+  const t = useTranslations('Footer');
+  const linksKeys = ['fbLink', 'goLink'];
 
   return (
     <div className={classes.footer}>
@@ -22,12 +24,12 @@ export default function Footer() {
 
         <Group className={classes.links}>
           {linksKeys.map((key) => (
-          <Anchor<'a'> target="_blank" key={t(`${key}.label`)} href={t(`${key}.link`)}>
-            {t(`${key}.label`)}
-          </Anchor>))}
+            <Anchor<'a'> target="_blank" key={t(`${key}.label`)} href={t(`${key}.link`)}>
+              {t(`${key}.label`)}
+            </Anchor>
+          ))}
         </Group>
-
       </Container>
     </div>
   );
-}
+};

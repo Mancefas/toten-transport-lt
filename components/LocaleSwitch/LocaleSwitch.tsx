@@ -1,10 +1,12 @@
-import {useLocale, useTranslations} from 'next-intl';
-import LocaleSwitchSelect from './LocaleSwitchSelect';
+import { useLocale, useTranslations } from 'next-intl';
 import { locales } from '@/lib/navigation';
 
+import { LocaleSwitchSelect } from './LocaleSwitchSelect';
 import classes from './LocalSwitch.module.css';
 
-export default function LocaleSwitch() {
+type LocaleSwitchProps = {};
+
+export const LocaleSwitch: React.FC<LocaleSwitchProps> = () => {
   const t = useTranslations('LocaleSwitcher');
   const locale = useLocale();
 
@@ -12,13 +14,12 @@ export default function LocaleSwitch() {
     <LocaleSwitchSelect defaultValue={locale}>
       {locales.map((current) => (
         <option key={current} value={current} className={classes.option}>
-          {t('locale', {locale: current})}
+          {t('locale', { locale: current })}
         </option>
       ))}
     </LocaleSwitchSelect>
   );
-}
-
+};
 
 // import { useTransition, useState, useEffect} from 'react';
 // import { Select } from '@mantine/core';
@@ -26,9 +27,6 @@ export default function LocaleSwitch() {
 // import {useLocale, useTranslations} from 'next-intl';
 // import { locales, useRouter, usePathname } from '@/lib/navigation';
 // import classes from './LocalSwitch.module.css';
-
-
-
 
 // export default function LocaleSwitch() {
 //   const t = useTranslations('LocaleSwitcher');
@@ -59,13 +57,13 @@ export default function LocaleSwitch() {
 //     //     </option>
 //     //   ))}
 //     // </LocaleSwitchSelect>
-//     <Select 
-     
+//     <Select
+
 //       classNames={{wrapper: classes.wrapper}}
 //       variant="unstyled"
 //       disabled={isPending}
-//       data={locales.map((current) => (current.toUpperCase()))} 
-//       value={locale.toUpperCase()} 
+//       data={locales.map((current) => (current.toUpperCase()))}
+//       value={locale.toUpperCase()}
 //       onChange={setValue} />
 //   );
 // }

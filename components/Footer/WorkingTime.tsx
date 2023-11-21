@@ -1,10 +1,12 @@
 import React from 'react';
 import { Container, Group, Stack, Text, Card, Popover, Flex } from '@mantine/core';
 
-import { useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl';
 
-const WorkingTime = () => {
-  const t = useTranslations('WorkingTime')
+type WorkingTimeProps = {};
+
+export const WorkingTime: React.FC<WorkingTimeProps> = () => {
+  const t = useTranslations('WorkingTime');
   const weekdaysKeys = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
 
   return (
@@ -29,10 +31,7 @@ const WorkingTime = () => {
             </Group>
           </Card>
         </Popover.Dropdown>
-        
       </Popover>
     </Container>
   );
 };
-
-export default WorkingTime;

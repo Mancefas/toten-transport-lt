@@ -1,4 +1,4 @@
-import ContactsAccordion from '@/components/ContactsAccordion/ContactsAccordion';
+import { ContactsAccordion } from '@/components/ContactsAccordion/ContactsAccordion';
 import GoogleMapsIframe from '@/components/GoogleMapsIframe/GoogleMapsIframe';
 
 export default function ContactsPage() {
@@ -7,5 +7,5 @@ export default function ContactsPage() {
       <ContactsAccordion />
       <GoogleMapsIframe />
     </>
-  )
+  );
 }

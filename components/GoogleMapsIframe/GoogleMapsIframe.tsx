@@ -1,17 +1,19 @@
+'use client';
+
 import { SimpleGrid, Container, Center, Text } from '@mantine/core';
 
-import { useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl';
 
 import classes from './GoogleMapsIframe.module.css';
 
 type GoogleMapsIframeProps = {};
 
-const GoogleMapsIframe: React.FC<GoogleMapsIframeProps> = (props) => { 
+const GoogleMapsIframe: React.FC<GoogleMapsIframeProps> = () => {
   const t = useTranslations('Maps');
 
   const translationsKeys = ['Office', 'Warehouse'];
 
-  return(
+  return (
     <Container size="sm" pb="lg">
       <SimpleGrid spacing="lg" cols={{ base: 1, sm: 2 }}>
         {translationsKeys.map((place) => (
@@ -26,10 +28,11 @@ const GoogleMapsIframe: React.FC<GoogleMapsIframeProps> = (props) => {
               aria-hidden="false"
               loading="lazy"
             />
-        </Center>
+          </Center>
         ))}
       </SimpleGrid>
     </Container>
-  )};
+  );
+};
 
 export default GoogleMapsIframe;

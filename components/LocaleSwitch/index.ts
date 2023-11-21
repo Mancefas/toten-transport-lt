@@ -1,1 +1,1 @@
-export { default } from "./LocaleSwitch";
+export { LocaleSwitch } from './LocaleSwitch';

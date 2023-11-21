@@ -1,17 +1,19 @@
 'use client';
 
-import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem, Button } from '@mantine/core';
+import { Group, Box, Divider, Burger, Drawer, ScrollArea, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { useTranslations } from 'next-intl'
-import { Link } from '@/lib/navigation'
+import { useTranslations } from 'next-intl';
+import { Link } from '@/lib/navigation';
 
-import LocaleSwitch from '@/components/LocaleSwitch';
+import { LocaleSwitch } from '@/components/LocaleSwitch';
 import classes from './Header.module.css';
 
-export function Header() {
+type HeaderProps = {};
+
+export const Header: React.FC<HeaderProps> = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-  const t = useTranslations('Header')
-  const keys = ['aboutLink', 'contactsLink']
+  const t = useTranslations('Header');
+  const keys = ['aboutLink', 'contactsLink'];
 
   const navigationLinks = keys.map((key) => (
     <Link href={t(`${key}.linksTo`)} className={classes.link} key={t(`${key}.name`)}>
@@ -43,7 +45,7 @@ export function Header() {
           <Group visibleFrom="sm">
             <LocaleSwitch />
           </Group>
-            
+
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
       </header>
@@ -63,11 +65,10 @@ export function Header() {
           {navigationLinks}
           <Divider my="sm" />
 
-           {/* Language switch */}
-           <LocaleSwitch />
-
+          {/* Language switch */}
+          <LocaleSwitch />
         </ScrollArea>
       </Drawer>
     </Box>
   );
-}
+};
