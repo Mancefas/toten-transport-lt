@@ -1,3 +1,5 @@
+'use client'
+
 import { Container, Title, Text, Box } from '@mantine/core';
 import classes from './AboutUs.module.css';
 import { useTranslations } from 'next-intl'
