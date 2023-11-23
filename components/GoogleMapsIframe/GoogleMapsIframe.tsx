@@ -11,6 +11,7 @@ type GoogleMapsIframeProps = {};
 const GoogleMapsIframe: React.FC<GoogleMapsIframeProps> = () => {
   const t = useTranslations('Maps');
 
+  // workaround, because the next-intl lib does not allow to use arrays in translations
   const translationsKeys = ['Office', 'Warehouse'];
 
   return (
