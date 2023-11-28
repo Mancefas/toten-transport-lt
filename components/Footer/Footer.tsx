@@ -11,7 +11,8 @@ type FooterProps = {};
 
 export const Footer: React.FC<FooterProps> = () => {
   const t = useTranslations('Footer');
-  const linksKeys = ['fbLink', 'goLink'];
+  // workaround, because the next-intl lib does not allow to use arrays in translations
+  const linksKeys = ['fbLink'];
 
   return (
     <div className={classes.footer}>

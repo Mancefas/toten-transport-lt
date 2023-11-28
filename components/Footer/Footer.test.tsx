@@ -20,13 +20,9 @@ describe('Footer tests', () => {
 
   it('renders links', () => {
     component();
-    expect(screen.getByText(TranslationsENG.Footer.goLink.label)).toHaveAttribute(
+    expect(screen.getByText(TranslationsENG.Footer.fbLink.label)).toHaveAttribute(
       'href',
-      TranslationsENG.Footer.goLink.link
-    );
-    expect(screen.getByText(TranslationsENG.Footer.goLink.label)).toHaveAttribute(
-      'href',
-      TranslationsENG.Footer.goLink.link
+      TranslationsENG.Footer.fbLink.link
     );
   });
 

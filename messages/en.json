@@ -19,8 +19,6 @@
     "Footer": {
         "fbLink":
             { "link": "https://www.facebook.com/nordcarrier.lt", "label": "Facebook" },
-        "goLink":  
-            { "link": "#", "label": "Google" },
         "rights": "All rights reserved"
     },
     "WorkingTime":{
