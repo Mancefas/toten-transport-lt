@@ -25,9 +25,14 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
 
       {/* Main text */}
       <Container className={classes.zIndex}>
-        <Box w="80%" m="auto">
-          <Title className={classes.mainText}>{t('firstText')}</Title>
-        </Box>
+        <Stack w="80%" m="auto" gap="lg" ta="center">
+          <Title order={1} className={classes.mainText}>
+            {t('firstText')}
+          </Title>
+          <Title order={3} className={`${classes.mainText} ${classes.secondaryText}`}>
+            {t('secondText')}
+          </Title>
+        </Stack>
 
         {/* Call to action btn */}
         <Box mt="lg" m="auto" ta="center">

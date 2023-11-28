@@ -13,6 +13,8 @@ type HeaderProps = {};
 export const Header: React.FC<HeaderProps> = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const t = useTranslations('Header');
+
+  // workaround, because the next-intl lib does not allow to use arrays in translations
   const keys = ['aboutLink', 'contactsLink'];
 
   const navigationLinks = keys.map((key) => (
@@ -30,7 +32,7 @@ export const Header: React.FC<HeaderProps> = () => {
             <img
               src="/Toten-Transport.svg"
               className={classes.logo}
-              alt="Toten transport logo"
+              alt={t('logoAlt')}
               height="56px"
               width="200px"
             />

@@ -24,6 +24,8 @@ type FeaturesProps = {};
 
 export const Features: React.FC<FeaturesProps> = () => {
   const t = useTranslations('Feature');
+
+  // workaround, because the next-intl lib does not allow to use arrays in translations
   const featuresKeys = ['1', '2', '3', '4'];
 
   return (
