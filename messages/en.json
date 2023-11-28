@@ -6,14 +6,15 @@
         "btnLink": "en/contacts"
     },
     "Header": {
-        "aboutLink": {
-            "name": "About us", 
-            "linksTo": "/about"            
-        },
-        "contactsLink": {
-          "name": "Contacts", 
-          "linksTo": "/contacts"
-        }
+      "logoAlt": "Toten Transport Lithuania logo",
+      "aboutLink": {
+          "name": "About us", 
+          "linksTo": "/about"            
+      },
+      "contactsLink": {
+        "name": "Contacts", 
+        "linksTo": "/contacts"
+      }
     },
     "Footer": {
         "fbLink":

@@ -6,6 +6,7 @@
         "btnLink": "lt/contacts"
     },
     "Header": {
+      "logoAlt": "Toten Transport Lithuania logotipas",
       "aboutLink": {
           "name": "Apie mus", 
           "linksTo": "/about"            
