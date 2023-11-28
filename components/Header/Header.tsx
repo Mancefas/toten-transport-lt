@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = () => {
   ));
 
   return (
-    <Box py={10}>
+    <Box>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           {/* Company logo */}
