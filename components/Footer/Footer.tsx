@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = () => {
   const linksKeys = ['fbLink'];
 
   return (
-    <div className={classes.footer}>
+    <footer className={classes.footer}>
       <Container className={classes.inner}>
         <Text size="md">
           ©️ {new Date().getFullYear()} {t('rights')}
@@ -31,6 +31,6 @@ export const Footer: React.FC<FooterProps> = () => {
           ))}
         </Group>
       </Container>
-    </div>
+    </footer>
   );
 };

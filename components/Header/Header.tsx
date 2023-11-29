@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = () => {
   ));
 
   return (
-    <Box>
+    <>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           {/* Company logo */}
@@ -72,6 +72,6 @@ export const Header: React.FC<HeaderProps> = () => {
           <LocaleSwitch />
         </ScrollArea>
       </Drawer>
-    </Box>
+    </>
   );
 };

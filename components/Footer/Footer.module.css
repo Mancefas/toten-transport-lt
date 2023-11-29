@@ -1,4 +1,5 @@
 .footer {
+    min-height: 7vh;
     height: fit-content;
     box-shadow: var(--mantine-shadow-custom);
     -webkit-box-shadow: var(--mantine-shadow-custom);

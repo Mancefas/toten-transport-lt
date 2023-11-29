@@ -1,4 +1,6 @@
 .header {
+    min-height: 7vh;
+    height: fit-content;
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
     box-shadow: var(--mantine-shadow-custom);
