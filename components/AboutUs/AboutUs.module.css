@@ -1,4 +1,12 @@
 .container {
-    padding: 5rem 1rem;
+    /* padding: 5rem 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 86vh;
     height: fit-content;
+
+    @media (max-width: 600px) {
+       padding: 2rem 1rem;
+      }
 }

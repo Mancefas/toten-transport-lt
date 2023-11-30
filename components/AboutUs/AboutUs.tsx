@@ -11,7 +11,7 @@ export const AboutUs: React.FC<AboutUsProps> = () => {
   const t = useTranslations('About');
 
   return (
-    <Container size="md" className={classes.container}>
+    <Container className={classes.container}>
       <Title order={1} ta="center" className="toten-red" mb="lg">
         Toten Transport Lithuania, UAB
       </Title>

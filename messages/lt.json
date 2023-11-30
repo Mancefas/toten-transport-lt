@@ -17,11 +17,9 @@
       }
   },
     "Footer": {
-      "rights": "Visos teisės saugomos",
       "fbLink":
-            { "link": "https://www.facebook.com/nordcarrier.lt", "label": "Facebook" },
-      "goLink":  
-            { "link": "#", "label": "Google" }
+        { "link": "https://www.facebook.com/nordcarrier.lt", "label": "Facebook" },
+      "rights": "Visos teisės saugomos"
   },
   "WorkingTime":{
     "Mon":"Pirmadienis",

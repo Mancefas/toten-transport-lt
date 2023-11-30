@@ -4,4 +4,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    
+    @media (max-width: 600px) {
+        padding: 3rem 1rem;
+      }
 }
