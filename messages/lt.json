@@ -70,7 +70,7 @@
       },
       "Kiti": {
         "id": "Kiti",
-        "name": "Kitos kryptys. Negabaritiniai kroviniai, spec krovinių gabenimas",
+        "name": "Negabaritiniai kroviniai, spec krovinių gabenimas",
         "person": "Kęstutis",
         "mobHref": "+37069838550",
         "mob": "+370 698 38550",
@@ -79,10 +79,10 @@
       },
       "Fin": {
         "id": "Fin",
-        "name": "Krovinių gabenimas Suomijos kryptimis, kelto bilietų užsakymai",
-        "person": "Jurgita",
-        "mobHref": "+37069962074",
-        "mob": "+370 699 62074",
+        "name": "Krovinių gabenimas Suomijos kryptimis",
+        "person": "Kęstutis",
+        "mobHref": "+37069838550",
+        "mob": "+370 698 38550",
         "mailHref": "fin@toten-transport.lt",
         "mail": "fin@toten-transport.lt"
       },

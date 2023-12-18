@@ -70,7 +70,7 @@
       },
       "Kiti": {
         "id": "Kiti",
-        "name": "Other directions. Oversized load, special loads",
+        "name": "Oversized load, special loads",
         "person": "Kęstutis",
         "mobHref": "+37069838550",
         "mob": "+370 698 38550",
@@ -79,10 +79,10 @@
       },
       "Fin": {
         "id": "Fin",
-        "name": "Regular partial and full freight transportation to Finland, ferry tickets",
-        "person": "Jurgita",
-        "mobHref": "+37069962074",
-        "mob": "+370 699 62074",
+        "name": "Partial and full freight transportation to Finland",
+        "person": "Kęstutis",
+        "mobHref": "+37069838550",
+        "mob": "+370 698 38550",
         "mailHref": "fin@toten-transport.lt",
         "mail": "fin@toten-transport.lt"
       },
@@ -94,7 +94,7 @@
         "mob": "+370 699 83248",
         "mailHref": "sonata@toten-transport.lt",
         "mail": "sonata@toten-transport.lt",
-        "mailHref2": "sinvoice@toten-transport.lt",
+        "mailHref2": "invoice@toten-transport.lt",
         "mail2": "invoice@toten-transport.lt"
       },
       "Rel": {
