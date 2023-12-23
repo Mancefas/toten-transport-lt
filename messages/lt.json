@@ -175,6 +175,6 @@
         "description": "Pilnų ir dalinių krovinių pervežimas į Norvegiją, Švediją, Suomiją ir atgal. Muitinės tarpininkas. Sandėliavimo bei krovos darbai Kaune. UAB Toten Transport Lithuania su jumis jau 20metų, priklausome TOTEN TRANSPORT AS kompanijų grupei."
     },
     "LocaleSwitcher": {
-      "locale": "{locale, select, lt {LTU} en {ENG} other {Unknown}}"
+      "locale": "{locale, select, lt {Lietuviškai} en {ENG} no {NOR} other {Unknown}}"
     }
 }

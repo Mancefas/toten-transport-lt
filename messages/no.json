@@ -1,49 +1,49 @@
 {
     "Hero": {
-        "firstText": "Partial and full freight transportation between Lithuania and Sweden, Norway and Finland",
-        "secondText": "We also provide warehousing, terminal, and customs brokerage services",
-        "btnText": "Contact us",
-        "btnLink": "en/contacts"
+        "firstText": "Delvis og full lastetransport mellom Litauen og Norge, Sverige og Finland",
+        "secondText": "Vi tilbyr også tjenester innen lagring, terminal og fortolling.",
+        "btnText": "Kontakt oss",
+        "btnLink": "no/contacts"
     },
     "Header": {
       "logoAlt": "Toten Transport Lithuania logo",
       "aboutLink": {
-          "name": "About us", 
+          "name": "Om oss", 
           "linksTo": "/about"            
       },
       "contactsLink": {
-        "name": "Contacts", 
+        "name": "Kontakter", 
         "linksTo": "/contacts"
       }
     },
     "Footer": {
         "fbLink":
             { "link": "https://www.facebook.com/nordcarrier.lt", "label": "Facebook" },
-        "rights": "All rights reserved"
+        "rights": "Alle rettigheter reservert"
     },
     "WorkingTime":{
-            "Mon":"Monday",
-            "Tue": "Tuesday", 
-            "Wed": "Wednesday",
-            "Thu": "Thursday", 
+            "Mon":"Mandag",
+            "Tue": "Tirsdag", 
+            "Wed": "Onsdag",
+            "Thu": "Torsdag", 
             "Fri":"Friday",
             "time": "9:00 - 17:00",
-            "working": "Opening hours"
+            "working": "Åpningstider"
     },            
     "About": {
-        "firstText": "Lithuanian-Norwegian logistics services company. Operating in Kaunas since year 2000. Member of Norwegian group Toten Transport AS. The main activity is transportation of small, partial and full loads by road transport to Scandinavian and Baltic countries. We are a member of Lithuanian National Freight Forwarders Association LINEKA. Civil liability is insured under Lithuanian Freight Forwarders General Freight Forwarding Conditions LEBES - Conforms to Nordic Freight Forwarding Conditions NSAB 2015. The company's vehicles are equipped with cargo tracking equipment, we can quickly provide information about the cargo being transported and the location of the machine.",
-        "secondText": "Every order and every customer is important to us!",
-        "totenText": "From 2017 we are part of Norwegian logistics group TOTEN TRANSPORT AS. The group has been operating in the market for more than 40 years, is well known and appreciated in Scandinavia, and is also expanding.",
-        "code":"Company code",
-        "vat": "VAT code",
-        "address": "Office address",
-        "phone":"Contact phone",
-        "email":"E-mail"
+        "firstText": "Litauisk-norsk logistikkselskap. Har opperert i Kaunas siden år 2000. Medlem av den norske gruppen Toten Transport AS. Hovedaktiviteten er transport av små, delvise og fulle laster med veitransport til Norden og Baltikum. Vi er medlem av den litauiske nasjonale godstransportforeningen LINEKA. Sivilansvar er forsikret under Litauiske godstransportørers generelle fraktvilkår LEBES - I samsvar med Nordisk Speditørforbunds Alminnelige Bestemmelser (NSAB) 2015. Selskapets kjøretøy er utstyrt med lastsporingsutstyr, vi kan raskt gi informasjon om lasten som transporteres og maskinens plassering.",
+        "secondText": "Hver bestilling og hver kunde er viktig for oss!",
+        "totenText": "Fra 2017 er vi en del av den norske logistikkgruppen TOTEN TRANSPORT AS. Gruppen har operert på markedet i mer enn 40 år, er velkjent og verdsatt i Norden, og utvider seg også.",
+        "code":"Firmanummer",
+        "vat": "MVA-nummer",
+        "address": "Kontoradresse",
+        "phone":"Kontakttelefon",
+        "email":"E-post"
     },
     "Contacts": {
       "INo": {
         "id": "INo",
-        "name": "Regular partial and full freight transportation from Lithuania to Sweden, Norway",
+        "name": "Regelmessig delvis og full lastetransport fra Litauen til Norge og Sverige",
         "person": "Jolita",
         "mobHref": "+37069930371",
         "mob": "+370 699 30371",
@@ -52,7 +52,7 @@
       },
       "IsNo": {
         "id": "IsNo",
-        "name": "Regular partial and full freight transportation from Sweden, Norway to Lithuania",
+        "name": "Regelmessig delvis og full lastetransport fra Norge og Sverige til Litauen",
         "person": "Violeta",
         "mobHref": "+370608569900",
         "mob": "+370 685 69900",
@@ -61,7 +61,7 @@
       },
       "Muit": {
         "id": "Muit",
-        "name": "Customs paperwork services in Lithuania",
+        "name": "Fortollingspapirarbeid i Litauen",
         "person": "Deimantas",
         "mobHref": "+37068564205",
         "mob": "+370 685 64205",
@@ -70,7 +70,7 @@
       },
       "Kiti": {
         "id": "Kiti",
-        "name": "Oversized load, special loads",
+        "name": "Overdimensjonert last, spesielle laster",
         "person": "Kęstutis",
         "mobHref": "+37069838550",
         "mob": "+370 698 38550",
@@ -79,7 +79,7 @@
       },
       "Fin": {
         "id": "Fin",
-        "name": "Partial and full freight transportation to Finland",
+        "name": "Delvis og full lastetransport til Finland",
         "person": "Kęstutis",
         "mobHref": "+37069838550",
         "mob": "+370 698 38550",
@@ -88,7 +88,7 @@
       },
       "Buh": {
         "id": "Buh",
-        "name": "Bookkeeping, finance, invoices",
+        "name": "Regnskap, finans, fakturaer",
         "person": "Sonata",
         "mobHref": "+37069983248",
         "mob": "+370 699 83248",
@@ -99,7 +99,7 @@
       },
       "Rel": {
         "id": "Rel",
-        "name": "Relations with haulers, marketing, special projects",
+        "name": "Forhold til fraktførere, markedsføring, spesielle prosjekter",
         "person": "Audrius",
         "mobHref": "+37069944422",
         "mob": "+370 699 44422",
@@ -108,7 +108,7 @@
       },
       "Sand": {
         "id": "Sand",
-        "name": "Warehouse",
+        "name": "Lager",
         "person": "Gintaras",
         "mobHref": "+37069990014",
         "mob": "+370 699 90014",
@@ -117,7 +117,7 @@
       },
       "Vad": {
         "id": "Vad",
-        "name": "Managing Director",
+        "name": "Administrerende direktør",
         "person": "Eglė",
         "mobHref": "+37061873017",
         "mob": "+370 618 73017",
@@ -126,7 +126,7 @@
       },
       "Inv": {
         "id": "Inv",
-        "name": "Invoices",
+        "name": "Fakturaer",
         "person": "",
         "mobHref": "",
         "mob": "",
@@ -137,46 +137,46 @@
     "Feature": {
       "1": {
         "id": "1",
-        "featureHeading": "Good experience in trucking",
-        "featureText": "Nordcarrier Baltic was established in 2000. Since 2017 we are part of Toten Transport group.",
+        "featureHeading": "God erfaring i lastebiltransport",
+        "featureText": "Nordcarrier Baltic ble etablert i 2000. Siden 2017 er vi en del av Toten Transport-gruppen.",
         "featureIcon": "certificat"
       },
       "2": {
         "id": "2",
-        "featureHeading": "Regular departures",
-        "featureText": "Departures 1-2 times per week. Departures to north Norway 1 time per week.",
+        "featureHeading": "Regelmessige avganger",
+        "featureText": "Avganger 1-2 ganger per uke. Avganger til Nord-Norge 1 gang per uke.",
         "featureIcon": "calendar"
       },
       "3": {
         "id": "3",
-        "featureHeading": "Customs",
-        "featureText": "Customs paperwork services in Lithuania and Norway.",
+        "featureHeading": "Toll",
+        "featureText": "Fortollingspapirarbeid i Litauen og Norge.",
         "featureIcon": "file"
       },
       "4": {
         "id": "4",
-        "featureHeading": "Warehouse in Lithuania and Norway",
-        "featureText": "Terminal services in Kaunas and Oslo.",
+        "featureHeading": "Lager i Litauen og Norge",
+        "featureText": "Lager i Litauen og Norge",
         "featureIcon": "warehouse"
       }
     },
     "Maps": {
        "Office" : {
-        "title": "Office address",
+        "title": "Kontor adresse",
         "mapPlace": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2296.353475035389!2d23.94600481577211!3d54.861604080324454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7220e526e5937%3A0xc073b77d54d88e8!2sNordcarrier%20Baltic!5e0!3m2!1slt!2slt!4v1663436199566!5m2!1slt!2slt",
-        "iframeTitle": "Nordcarrier Baltic office address"
+        "iframeTitle": "Nordcarrier Baltic kontor adresse"
         },
        "Warehouse" : {
-        "title": "Warehouse address",
+        "title": "Lageradresse",
         "mapPlace": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2292.804175290485!2d24.064754515774652!3d54.92390838033981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7177a6bf24acb%3A0x34339fb09aefa1df!2sNordcarrier%20Baltic%2C%20sand%C4%97lis!5e0!3m2!1slt!2slt!4v1663436314093!5m2!1slt!2slt",
-        "iframeTitle": "Nordcarrier Baltic warehouse address"
+        "iframeTitle": "Nordcarrier Baltic lageradresse"
         }
       },
     "MetaData": {
-        "title": "Toten Transport Lithuania - Logistics company for you.",
-        "description": "Partial and full freight transportation between Lithuania and Scandinavia countrys (Norway, Sweden and Finland). Toten Transport Lithuania is part of Toten transport AS."
+        "title": "Toten Transport Lithuania - Logistikkselskapet for deg.",
+        "description": "Delvis og full lastetransport mellom Litauen og Norden (Norge, Sverige og Finland). Toten Transport Litauen er en del av Toten Transport AS."
     },
     "LocaleSwitcher": {
-        "locale": "{locale, select, lt {LTU} en {English} no {NOR} other {Unknown}}"
+        "locale": "{locale, select, lt {LTU} en {ENG} no {Norsk} other {Unknown}}"
     }
 }
