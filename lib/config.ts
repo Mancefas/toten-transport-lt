@@ -8,6 +8,7 @@ export const pathnames = {
   '/about': {
     en: '/about',
     lt: '/apie',
+    no: '/om',
   },
 } satisfies Pathnames<typeof locales>;
 
