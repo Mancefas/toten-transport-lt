@@ -1,0 +1,23 @@
+RewriteEngine On
+
+# Add .html extension to URLs ending with a slash
+RewriteRule ^([^/]+)/$ $1.html
+
+# Check if the file doesn't exist for the above rule
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html
+
+# Add .html extension to URLs with two levels
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+
+# Check if the file doesn't exist for the above rule
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Check if the requested URL is neither a file nor a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Check if the requested URI doesn't end with a file extension
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{1,5}$
+
+# Internally redirect to the HTML file
+RewriteRule ^(.*)$ $1.html [L]
