@@ -38,7 +38,7 @@ export const AboutUs: React.FC<AboutUsProps> = () => {
         </Text>
 
         <Text>
-          {t('phone')} - <b>+370 37 302375</b>
+          {t('phone')} - <b>+370 618 73017</b>
         </Text>
 
         <Text>

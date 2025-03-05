@@ -14,7 +14,7 @@ export const ContactsAccordion: React.FC<ContactsAccordionProps> = () => {
   const translationKey = 'Contacts';
   const t = useTranslations(translationKey);
   // workaround, because the next-intl lib does not allow to use arrays in translations
-  const contactsKeys = ['Vad', 'INo', 'IsNo', 'Muit', 'Kiti', 'Fin', 'Buh', 'Rel', 'Sand', 'Inv'];
+  const contactsKeys = ['Vad', 'INo', 'IsNo', 'Muit', 'Fin', 'Buh', 'Rel', 'Sand', 'Inv'];
 
   return (
     <Container size="sm" className={classes.accordionContainer}>
