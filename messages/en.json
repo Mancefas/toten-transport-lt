@@ -44,7 +44,7 @@
       "INo": {
         "id": "INo",
         "name": "Regular partial and full freight transportation from Lithuania to Sweden, Norway",
-        "person": "Jolita",
+        "person": "Jolita Pranskevičienė",
         "mobHref": "+37069930371",
         "mob": "+370 699 30371",
         "mailHref": "scand@toten-transport.lt",
@@ -53,7 +53,7 @@
       "IsNo": {
         "id": "IsNo",
         "name": "Regular partial and full freight transportation from Sweden, Norway to Lithuania",
-        "person": "Violeta",
+        "person": "Violeta Kondrotienė",
         "mobHref": "+37068569900",
         "mob": "+370 685 69900",
         "mailHref": "scand@toten-transport.lt",
@@ -71,7 +71,7 @@
       "Fin": {
         "id": "Fin",
         "name": "Partial and full freight transportation to Finland",
-        "person": "Jolita",
+        "person": "Jolita Pranskevičienė",
         "mobHref": "+37069930371",
         "mob": "+370 699 30371",
         "mailHref": "scand@toten-transport.lt",
@@ -80,7 +80,7 @@
       "Buh": {
         "id": "Buh",
         "name": "Bookkeeping, finance, invoices",
-        "person": "Sonata",
+        "person": "Sonata Mykolaitienė",
         "mobHref": "+37069983248",
         "mob": "+370 699 83248",
         "mailHref": "sonata@toten-transport.lt",
@@ -91,7 +91,7 @@
       "Rel": {
         "id": "Rel",
         "name": "Relations with clients, marketing, special projects",
-        "person": "Renata",
+        "person": "Renata Lincevičienė",
         "mobHref": "+37069962074",
         "mob": "+370 699 62074",
         "mailHref": "renata@toten-transport.lt",
@@ -100,20 +100,38 @@
       "Sand": {
         "id": "Sand",
         "name": "Warehouse",
-        "person": "Gintaras",
+        "person": "Gintaras Suškovas",
         "mobHref": "+37069990014",
         "mob": "+370 699 90014",
         "mailHref": "sandelis@toten-transport.lt",
         "mail": "sandelis@toten-transport.lt"
       },
+       "Dir": {
+        "id": "Dir",
+        "name": "Director",
+        "person": "Kęstutis Čižikas",
+        "mobHref": "+37065577821",
+        "mob": "+370 655 77821",
+        "mailHref": "kestutis@toten-transport.lt",
+        "mail": "kestutis@toten-transport.lt"
+      },
       "Vad": {
         "id": "Vad",
-        "name": "Managing Director",
-        "person": "Eglė",
+        "name": "Operations Director",
+        "person": "Eglė Vaicekauskienė",
         "mobHref": "+37061873017",
         "mob": "+370 618 73017",
         "mailHref": "egle@toten-transport.lt",
         "mail": "egle@toten-transport.lt"
+      },
+       "Sal": {
+        "id": "Sal",
+        "name": "Pardavimų vadovas",
+        "person": "Gediminas Stundys",
+        "mobHref": "+37060246245",
+        "mob": "+370 602 46245",
+        "mailHref": "gediminas@toten-transport.lt",
+        "mail": "gediminas@toten-transport.lt"
       },
       "Inv": {
         "id": "Inv",
