@@ -126,7 +126,7 @@
       },
        "Sal": {
         "id": "Sal",
-        "name": "Pardavimų vadovas",
+        "name": "Sales manager",
         "person": "Gediminas Stundys",
         "mobHref": "+37060246245",
         "mob": "+370 602 46245",
@@ -141,8 +141,12 @@
         "mob": "",
         "mailHref": "invoice@toten-transport.lt",
         "mail": "invoice@toten-transport.lt"
+      },
+      "Executives" : {
+      "title": "Managers"
       }
-    },          
+    }, 
+          
     "Feature": {
       "1": {
         "id": "1",

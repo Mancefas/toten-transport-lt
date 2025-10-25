@@ -106,7 +106,7 @@
       },
         "Dir": {
         "id": "Dir",
-        "name": "Director",
+        "name": "Direktorius",
         "person": "Kęstutis Čižikas",
         "mobHref": "+37065577821",
         "mob": "+370 655 77821",
@@ -116,7 +116,7 @@
       "Vad": {
         "id": "Vad",
         "name": "Operacijų direktorė",
-        "person": "Eglė",
+        "person": "Eglė Vaicekauskienė",
         "mobHref": "+37061873017",
         "mob": "+370 618 73017",
         "mailHref": "egle@toten-transport.lt",
@@ -124,7 +124,7 @@
       },
        "Sal": {
         "id": "Sal",
-        "name": "Sales manager",
+        "name": "Pardavimų vadovas",
         "person": "Gediminas Stundys",
         "mobHref": "+37060246245",
         "mob": "+370 602 46245",
@@ -139,8 +139,11 @@
         "mob": "",
         "mailHref": "invoice@toten-transport.lt",
         "mail": "invoice@toten-transport.lt"
+      },
+      "Executives" : {
+      "title": "Vadovai"
       }
-    },    
+    },
     "Feature": {
       "1": {
         "id": "1",

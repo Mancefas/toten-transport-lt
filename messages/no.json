@@ -118,7 +118,7 @@
       "Vad": {
         "id": "Vad",
         "name": "Driftsdirektør",
-        "person": "Eglė",
+        "person": "Eglė Vaicekauskienė",
         "mobHref": "+37061873017",
         "mob": "+370 618 73017",
         "mailHref": "egle@toten-transport.lt",
@@ -141,8 +141,12 @@
         "mob": "",
         "mailHref": "invoice@toten-transport.lt",
         "mail": "invoice@toten-transport.lt"
+      },
+      "Executives" : {
+      "title": "Ledere"
       }
-    },          
+    },
+           
     "Feature": {
       "1": {
         "id": "1",
