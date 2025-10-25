@@ -9,3 +9,11 @@
         padding: 3rem 1rem;
       }
 }
+
+.executiveAccordionInnerContainer {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

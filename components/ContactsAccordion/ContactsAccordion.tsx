@@ -4,6 +4,7 @@ import { IconPhoneCall, IconMail, IconUser, IconLicense } from '@tabler/icons-re
 import { Accordion, Container, Box, Text, Group, Stack } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 
+import { ExecutiveAccordion } from './ExecutiveAccordion';
 import classes from './ContactsAccordion.module.css';
 
 const totenColor = '#E31937';
@@ -14,13 +15,16 @@ export const ContactsAccordion: React.FC<ContactsAccordionProps> = () => {
   const translationKey = 'Contacts';
   const t = useTranslations(translationKey);
   // workaround, because the next-intl lib does not allow to use arrays in translations
-  const contactsKeys = ['Vad', 'INo', 'IsNo', 'Muit', 'Fin', 'Buh', 'Rel', 'Sand', 'Inv'];
+  const contactsKeys = ['Sal','INo', 'IsNo', 'Muit', 'Fin', 'Buh', 'Rel', 'Sand', 'Inv'];
 
   return (
     <Container size="sm" className={classes.accordionContainer}>
       <Box ta="center">
         <IconPhoneCall size="32" color="green" />
       </Box>
+
+      <ExecutiveAccordion />
+
       <Accordion>
         {contactsKeys.map((contact) => (
           <Accordion.Item value={t(`${contact}.id`)} key={t(`${contact}.id`)}>
